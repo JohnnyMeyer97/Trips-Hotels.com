@@ -1,0 +1,45 @@
+/*RESET
+-----------------------------------------*/
+*, *:before, *:after{margin: 0; padding: 0; box-sizing: border-box; -webkit-box-sizing: border-box;}
+body{font-family: 'open sans', sans-serif; font-size: inherit;}
+
+input, select, iframe, button{border: none; font-family: 'open sans', sans-serif}
+h1, h2, h3{margin: 0; padding: 0;}
+ol, ul{list-style: none;}
+a{text-decoration: none; color: inherit; transition: all .4s ease-in-out;}
+a:hover{color: #f9014d;}
+img{max-width: 100%; border: none;}
+
+
+input[type=checkbox] + label {
+  display: block;
+  margin: 3px;
+  cursor: pointer;
+  padding: 3px;
+}
+input[type=checkbox]{
+  display: none;
+}
+input[type=checkbox] + label:before {
+  content: "\2714";
+  border: 2px solid #fff;
+  border-radius: 3px;
+  background: #fff;
+  color: rgb(0, 0, 0);
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  padding-left: 1px;
+  margin-right: 1px;
+  line-height: 18px;
+  margin-right: 5px;
+  transition: .2s;
+}
+input[type=checkbox] + label:active:before {
+  transform: scale(0);
+}
+input[type=checkbox]:checked + label:before {
+  background-color: rgb(0, 118, 214);
+  border-color: rgb(0, 118, 214);
+  color: #fff;
+}

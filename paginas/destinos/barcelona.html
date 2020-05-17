@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Hotéis em Barcelona</title>
+    <link rel="shortcut icon" href="../../images/cruise.ico">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../../css/fontawesome-all.min.css">
+    <!--estilo geral-->
+    <link rel="stylesheet" href="../../css/destinos.css">
+    <!-- calendário -->
+    <link rel="stylesheet" href="../../css/window-date-picker.css">
+</head>
+<body>
+    <!-- Start HEADER-MENUBAR -->
+    <section class="section">
+        <div class="bg-black">
+            <header class="header content">
+                <a class="anchor" href="../../index.html"><span>T</span>rips <span>&</span> <span>H</span>otels</a>
+
+                <a href="#" class="nav-toggle fl-right">
+                    <i class="fas fa-bars"></i> MENU
+                </a>
+
+                <nav class="nav">
+                    <p class="text-right">
+                        <span class="nav-close">
+                            <i class="fas fa-times"></i>
+                        </span>
+                    </p>
+                    <ul>
+                        <li><a href="#">Passagens aéreas</a></li>
+                        <li><a href="#">Hotéis</a></li>
+                        <li><a href="#">Carros</a></li>
+                        <li><a href="#">Entrar</a></li>
+                    </ul>
+                </nav>
+            </header>
+        </div>
+    </section>
+    <!-- End /HEADER-MENUBAR -->
+
+    <!-- Start SEARCH -->
+    <section class="section">
+        <div class="search-box bg-fixed">                
+            <!-- slider container -->
+            <div class="slider fade bg-fixed" id="slide-0">
+            <!-- slide image -->
+            </div>                  
+            <div class="slider fade bg-fixed" id="slide-1">
+            <!-- slide image -->
+            </div>                    
+            <!--<div class="slider fade bg-fixed" id="slide-2">
+                slide image
+            </div>                    
+            <div class="slider fade bg-fixed" id="slide-3">
+                slide image
+            </div>                    
+            <div class="slider fade bg-fixed" id="slide-4">
+                slide image
+            </div>-->                  
+
+            <!-- dots -->
+            <div id="dots-wrapper" class="center_x">
+                <!-- dot navigation for each slide -->
+                <div class="dots-navigation"></div>                   
+                <div class="dots-navigation"></div>                    
+                <!--<div class="dots-navigation"></div>                    
+                <div class="dots-navigation"></div>                             
+                <div class="dots-navigation"></div>-->
+            </div>
+            <!-- fim/slider container -->
+            <header>
+                <h1>Hotéis em Barcelona</h1>
+                <h2>Pesquise hotéis em Barcelona em centenas de sites de viagem ao mesmo tempo.</h2>
+            </header>
+
+            <form name="formsearch" method="post" action="">
+                <input type="search" name="busca" id="busca" placeholder="Pesquisar em Barcelona" />
+                <div id="picker"></div>
+                <input id="demo" class="toggle" placeholder="Entrada">
+                <div id="picker2"></div>
+                <input id="demo2" class="toggle2" placeholder="Saída">
+                <!--por enquanto coloquei um input, más um select talvez seja melhor-->
+                <input type="text" name="Nroom" id="Iroom" placeholder="1 Quarto, 2 hóspedes">
+                <button class="form-submit" type="submit"><i class="fas fa-search"></i></button>
+            </form>
+        </div>
+    </section>
+    <!-- end /SEARCH -->
+
+    <!-- Start HOTÉIS -->
+    <section class="section">
+        <article class="content">
+
+            <header class="title">
+                <h2>Melhores hotéis em Barcelona, encontre hotéis para negócios ou lazer.</h2>
+            </header>
+
+            <div class="container-content">
+                <div class="box-image">
+                    <div class="box-cover">
+                        <!-- slide -->
+                        <div class="slide-one fade">
+                        <!-- slide image -->
+                        <img src="../../images/Barcelona/El_Avenida_Palace_Hotel/El-Avenida-Palace-Hotel---1.jpg" alt="First Image">
+                        </div>
+                        <div class="slide-one fade">
+                        <!-- slide image -->
+                        <img src="../../images/Barcelona/El_Avenida_Palace_Hotel/El-Avenida-Palace-Hotel---2.jpg" alt="Second Image">
+                        </div>
+                        <div class="slide-one fade">
+                        <!-- slide image -->
+                        <img src="../../images/Barcelona/El_Avenida_Palace_Hotel/El-Avenida-Palace-Hotel---3.jpg" alt="Third Image">
+                        </div>
+                        <div class="slide-one fade">
+                        <!-- slide image -->
+                        <img src="../../images/Barcelona/El_Avenida_Palace_Hotel/El-Avenida-Palace-Hotel---4.jpg" alt="Fourth Image">
+                        </div>
+
+                        <!-- dots -->
+                        <!-- dot navigation for each slide-->
+                        <div id="dots-wrapper">                                
+                            <div class="dot-one-navigation"></div>
+                            <div class="dot-one-navigation"></div>
+                            <div class="dot-one-navigation"></div>
+                            <div class="dot-one-navigation"></div>
+                        </div> 
+                    </div>                       
+                </div>
+                <div class="box-info">
+                    <div class="box-content fl-left">
+                        <div class="header-content">
+                            <div class="title-content">El Avenida Palace Hotel</div>
+                            <div class="stars-content">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <span>Hotel</span>
+                            </div>
+                        </div>
+                        <div class="addres">
+                            <i class="fas fa-map-marker-alt"></i><span> Gran Via, 605, Eixample, 08007 Barcelona, Espanha</span>
+                        </div>
+                        <div class="info-content">
+                            <p><span>8.7</span><b> Muito bom</b> (4.220 avaliações)</p>
+                        </div>
+                    </div>
+                    <div class="price">
+                        <span>Hotels.com</span>
+                        <span>$ 230</span></br>
+                        <a href="#">Ver oferta</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="container-content">
+                <div class="box-image">
+                    <div class="box-cover">
+                        <!-- slide -->
+                        <div class="slide-two fade">
+                        <!-- slide image -->
+                        <img src="../../images/Barcelona/Hotel_Barcelona_1882/Hotel-Barcelona-1882---1.jpg" alt="First Image">
+                        </div>
+                        <div class="slide-two fade">
+                        <!-- slide image -->
+                        <img src="../../images/Barcelona/Hotel_Barcelona_1882/Hotel-Barcelona-1882---2.jpg" alt="Second Image">
+                        </div>
+                        <div class="slide-two fade">
+                        <!-- slide image -->
+                        <img src="../../images/Barcelona/Hotel_Barcelona_1882/Hotel-Barcelona-1882---3.jpg" alt="Third Image">
+                        </div>
+                        <div class="slide-two fade">
+                        <!-- slide image -->
+                        <img src="../../images/Barcelona/Hotel_Barcelona_1882/Hotel-Barcelona-1882---4.jpg" alt="Fourth Image">
+                        </div>
+                        <div class="slide-two fade">
+                        <img src="../../images/Barcelona/Hotel_Barcelona_1882/Hotel-Barcelona 1882-5.jpg" alt="Fourth Image">
+                        </div>
+
+                        <!-- dots -->
+                        <!-- dot navigation for each slide-->
+                        <div id="dots-wrapper">                                
+                            <div class="dot-two-navigation"></div>
+                            <div class="dot-two-navigation"></div>
+                            <div class="dot-two-navigation"></div>
+                            <div class="dot-two-navigation"></div>
+                            <div class="dot-two-navigation"></div>
+                        </div>
+                    </div>  
+                </div>
+                <div class="box-info">
+                    <div class="box-content fl-left">
+                        <div class="header-content">
+                            <div class="title-content">Hotel Barcelona 1882</div>
+                            <div class="stars-content">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <span>Hotel</span>
+                            </div>
+                        </div>
+                        <div class="addres">
+                            <p><i class="fas fa-map-marker-alt"></i> 482 Carrer de Còrsega, Gràcia, 08025 Barcelona, Espanha</p>
+                        </div>
+                        <div class="info-content">
+                            <p><span>9.3</span><b> Excelente</b> (1.919 avaliações)</p>
+                        </div>
+                    </div>
+                    <div class="price">
+                        <span>Hotels.com</span>
+                        <span>$ 470</span>
+                        <a href="#">Ver oferta</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="container-content">
+                <div class="box-image">
+                    <div class="box-cover">
+                        <!-- slide -->
+                        <div class="slide-three fade">
+                        <!-- slide image -->
+                        <img src="../../images/Barcelona/NH_Collection_Barcelona_Gran_Hotel_Calderón/NH-Collection-Barcelona-Gran-Hotel-Calderón---1.jpg" alt="First Image">
+                        </div>
+                        <div class="slide-three fade">
+                        <!-- slide image -->
+                        <img src="../../images/Barcelona/NH_Collection_Barcelona_Gran_Hotel_Calderón/NH-Collection-Barcelona-Gran-Hotel-Calderón---2.jpg" alt="Second Image">
+                        </div>
+                        <div class="slide-three fade">
+                        <!-- slide image -->
+                        <img src="../../images/Barcelona/NH_Collection_Barcelona_Gran_Hotel_Calderón/NH-Collection-Barcelona-Gran-Hotel-Calderón---3.jpg" alt="Third Image">
+                        </div>
+                        <div class="slide-three fade">
+                        <!-- slide image -->
+                        <img src="../../images/Barcelona/NH_Collection_Barcelona_Gran_Hotel_Calderón/NH-Collection-Barcelona-Gran-Hotel-Calderón---4.jpg" alt="Fourth Image">
+                        </div>
+
+                        <!-- dots -->
+                        <!-- dot navigation for each slide--> 
+                        <div id="dots-wrapper">                                
+                            <div class="dot-three-navigation"></div>
+                            <div class="dot-three-navigation"></div>
+                            <div class="dot-three-navigation"></div>
+                            <div class="dot-three-navigation"></div>
+                        </div>
+                    </div>                        
+                </div>
+                <div class="box-info">
+                    <div class="box-content fl-left">
+                        <div class="header-content">
+                            <div class="title-content">NH Collection Barcelona Gran Hotel Calderón</div>
+                            <div class="stars-content">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <span>Hotel</span>
+                            </div>
+                        </div>
+                        <div class="addres">
+                            <p><i class="fas fa-map-marker-alt"></i> Rambla Catalunya, 26, Eixample, 08007 Barcelona, Espanha</p>
+                        </div>
+                        <div class="info-content">
+                            <p><span>8.8</span><b> Muito bom</b> (2.986 avaliações)</p>
+                        </div>
+                    </div>
+                    <div class="price">
+                        <span>Hotels.com</span>
+                        <span>$ 370</span>
+                        <a href="#">Ver oferta</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container-content">
+                <div class="box-image">
+                    <div class="box-cover">
+                        <!-- slide -->
+                        <div class="slide-four fade">
+                        <!-- slide image -->
+                        <img src="../../images/Barcelona/Olivia_Balmes_Hotel/Olivia-Balmes-Hotel---1.jpg" alt="First Image">
+                        </div>
+                        <div class="slide-four fade">
+                        <!-- slide image -->
+                        <img src="../../images/Barcelona/Olivia_Balmes_Hotel/Olivia-Balmes-Hotel---2.jpg" alt="Second Image">
+                        </div>
+                        <div class="slide-four fade">
+                        <!-- slide image -->
+                        <img src="../../images/Barcelona/Olivia_Balmes_Hotel/Olivia-Balmes-Hotel---3.jpg" alt="Third Image">
+                        </div>
+                        <div class="slide-four fade">
+                        <!-- slide image -->
+                        <img src="../../images/Barcelona/Olivia_Balmes_Hotel/Olivia-Balmes-Hotel---4.jpg" alt="Fourth Image">
+                        </div>
+
+                        <!-- dots -->
+                        <!-- dot navigation for each slide--> 
+                        <div id="dots-wrapper">                                
+                            <div class="dot-four-navigation"></div>
+                            <div class="dot-four-navigation"></div>
+                            <div class="dot-four-navigation"></div>
+                            <div class="dot-four-navigation"></div>
+                        </div>
+                    </div>                        
+                </div>
+                <div class="box-info">
+                    <div class="box-content fl-left">
+                        <div class="header-content">
+                            <div class="title-content">Olivia Balmes Hotel</div>
+                            <div class="stars-content">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <span>Hotel</span>
+                            </div>
+                        </div>
+                        <div class="addres">
+                            <p><i class="fas fa-map-marker-alt"></i> Balmes, 117, Eixample, 08008 Barcelona, Espanha</p>
+                        </div>
+                        <div class="info-content">
+                            <p><span>9.4</span><b> Excelente</b> (1.778 avaliações)</p>
+                        </div>
+                    </div>
+                    <div class="price">
+                        <span>Hotels.com</span>
+                        <span>$ 480</span>
+                        <a href="#">Ver oferta</a>
+                    </div>
+                </div>
+            </div>
+
+        </article>
+    </section>
+    <!-- end /HOTÉIS -->
+
+    <!-- DICAS DE VIAGEM -->
+    <section class="section">
+        <div class="content">
+            <div class="container-dicas">
+                <header> <!--passar classe unica-->
+                    <h2>Dicas de viagem para Barcelona</h2>
+                    <h3>Deixe a gente te ajudar com as melhores dicas de viagem para Barcelona</h3>
+                </header>
+                <section>
+                    <h3>Quanto tempo as pessoas ficam em Barcelona?</h3>
+                    <p>4 noites é a duração típica de uma estadia para quem visita Barcelona. </p>
+
+                    <h3>Quanto custa um Hotel em Barcelona?</h3>
+                    <p>O preço de um hotel em Barcelona depende de diversos fatores tais como a classificação por estrela, localização e demanda. De forma geral, o custo médio de um otel é de aproximadamente 117 BRL por noite. </p>
+
+                    <h3>Qual é a melhor época para reservar um hotel em Barcelona?</h3>
+                    <p>Em janeiro, os preços são os mais baixos e representam a época com o melhor custo-benefício para reservar um quarto. Você pode encontrar tarifas até 34% mais baratas para o seu quarto.</p>
+
+                    <h3>Qual é o dia mais barato para se hospedar em Barcelona?</h3>
+                    <p>No momento, domingo é a melhor opção, sendo terça a mais cara. </p>
+
+                    <h3>Quanto custa um Hotel de luxo em Barcelona?</h3>
+                    <p>Os hotéis de luxo em Barcelona têm um preço de cerca de 141 BRL por noite para cada hóspede. Optar por um hotel de luxo pode representar um aumento de 20,547% em relação ao preço médio de um hotel em Barcelona, o que significa 112 BRL por noite para cada hóspede. </p>
+
+                    <h3>Quanto custa um hostel em Barcelona?</h3>
+                    <p>Em média, um hostel em Barcelona tem um preço por volta de 36 BRL. Esse preço é por pessoa, por noite e foi obtido usando hostels e hotéis de 2 estrelas ou menos. Para comparar, esse valor é 75 BRL mais baixo que um típico hotel. </p>
+
+                    <h3>Onde devo ficar e Barcelona?</h3>
+                    <p>Reservar hotéis em Eixample, Garcia, Sarria-Sant Gervasi e Les Corts é comum para quem visita Barcelona. </p>
+                </section>
+            </div>
+        </div>
+    </section>
+    <!-- end /DICAS DE VIAGEM -->
+
+    <!-- MAPA -->
+    <section class="section">
+        <div class="content">
+            <div class="mapa">
+                <span>MAPA</span>
+                <span>Indisponível</span>
+                <span><i class="fas fa-spinner fa-pulse"></i></span>
+            </div>
+        </div>
+    </section>
+    <!-- end /MAPA -->
+
+    <!-- INFORMAÇÕES ÚTEIS -->
+    <section class="section">
+        <div class="content">
+            <div class="container-info">
+                <header> <!--passar classe unica-->
+                    <h2>Informações úteis sobre Barcelona</h2>
+                </header>
+
+                <div>
+                    <p>Como ocorre com diversos outros destinos, as passagens aéreas para Barcelona costumam ficar mais baratas durante o inverno europeu, que ocorre no final e no começo do ano. Nessa época, embora existam dezenas de atividades e atrações para serem aproveitadas, a cidade não costuma estar cheia de turistas, o que deixa todos os preços mais baixos.</p>
+
+                    <p>Já quem não gosta de baixas temperaturas (o inverno em Barcelona pode chegar aos 5°C) e prefere dias com um clima mais agradável, que permitem grandes passeios sem muito cansaço ou suor, pode visitar Barcelona na primavera (de março a junho), ou entre setembro e outubro, meses que contam com diversos festivais, festas e feriados. Alguns exemplos são o Sónar, um dos maiores festivais de música eletrônica de Europa, e o festival Primavera Sound.</p>
+
+                    <p>Se for fazer sua viagem para Barcelona no verão, não se esqueça de levar roupas leves, já que você provavelmente se sentirá tentado a fazer caminhadas pela cidade. Lembre-se que o sol também estará forte, portanto, tome os cuidados necessários. Já se programar sua visita para o inverno ou outono, aposte nas roupas mais térmicas.</p>
+                    
+                    <p>Já se você preferir adquirir sua passagem para Barcelona para viajar nos meses do verão e curtir as praias locais, prepare o bolso, pois os preços na cidade e o número de turistas sobem consideravelmente por conta da alta temporada.</p>
+                </div>
+
+                <header> <!--passar classe unica-->
+                    <h2>Dicas de viagem para Barcelona</h2>
+                </header>
+
+                <div>
+                    <h3>Estadia em Barcelona</h3>
+                    <p>Sua passagem para Barcelona, em casos de trabalho ou estudo (que duram mais de 90 dias ou representam atividade remunerada), deve ser adquirida somente depois que o visto for obtido, para evitar problemas. Tenha em mãos também convites de empresa, matrículas e tudo que ajude a provar a razão da viagem.</p>
+
+                    <h3>Água</h3>
+                    <p>A água da cidade, embora considerada potável, tem um dos índices mais baixos de qualidade da Espanha, não sendo aconselhável para consumo.</p>
+
+                    <h3>Natal em Barcelona</h3>
+                    <p>Bem diferente do que estamos acostumados, em Barcelona e no resto da Espanha ainda é possível notar a tradição de fazer a entrega dos presentes natalinos do Dia de Reis, comemorado em 6 de janeiro. Muitas crianças espanholas, por sinal, escrevem cartas para os Reis Magos, não para o Papai Noel.</p>
+
+                    <h3>De Barcelona a Madrid</h3>
+                    <p>Sua viagem para Barcelona pode ficar ainda mais completa se for possível fazer uma visita a Madrid utilizando o moderno trem-bala que liga as duas cidades em um percurso de aproximadamente 3 horas.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- end /INFORMAÇÕES ÚTEIS -->
+
+    <!-- PARALLAX -->
+    <div class="parallax bg-fixed">
+        <div class="content">
+            <header> <!--passar classe unica-->
+                <h2>Um pouco mais sobre hotéis na Trips & Hotels</h2> 
+                <p>Descubra por que as pessoas usam a trips & hotels para procurar hotéis baratos</p>
+            </header>
+            <div class="row-sobre">
+                <div class="col-sobre">
+                    <div class="parallax-sobre">
+                        <h3>Garantia de melhor preço</h3>
+                        <p>É realmente mais barato? Nossa garantia de melhor preço traz a paz de espírito que você precisa, sabendo que terá os melhores preços online para hotéis baratos</p>
+                        <a href="#">Saiba mais</a>
+                    </div>
+                </div>
+                <div class="col-sobre">
+                    <div class="parallax-sobre">
+                        <h3>Melhores preços</h3>
+                        <p>Buscamos em todos os cantos da internet - dos principais sites de viagens aos sites de hotéis independentes - para que você possa encontrar hotéis baratos em todo mundo</p>
+                    </div>
+                </div>
+                <div class="col-sobre">
+                    <div class="parallax-sobre">
+                        <h3>Avaliação dos hospédes</h3>
+                        <p>As fotos dos hotéis e classificação por estrelas não lhe dizem tudo. Buscamos os principais sites de reserva de hotéis e reunimos comentários de hóspedes para que você possa saber todos os detalhes</p>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    <!-- end /PARALLAX -->
+
+    <!-- POPULARES -->
+    <!-- end /POPULARES -->
+
+    <!-- start FOOTER -->
+    <footer class="footer">
+        <div class="content">
+            <div class="footer-col">
+                <ul class="footer-col-links">
+                    <li><a href="#">Sobre nós</a></li>
+                    <li><a href="#">Vagas</a></li>
+                    <li><a href="#">Imprensa</a></li>
+                    <li><a href="#">Termos de Uso</a></li>
+                    <li><a href="#">Cookies e Política de Privacidade</a></li>
+                    <li><a href="#">Companhias aeréas</a></li>
+                    <li><a href="#">Apps</a></li>
+                    <li><a href="#">Ajuda</a></li>
+                    <li><a href="#">Contate-nos</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-col">
+                <ul class="footer-col-social">
+                    <li><a class="btn" href="#"><i class="fab fa-facebook-f"></i></a></li>
+                    <li><a class="btn" href="#"><i class="fab fa-twitter"></i></a></li>
+                    <li><a class="btn" href="#"><i class="fab fa-google"></i></a></li>
+                    <li><a class="btn" href="#"><i class="fab fa-instagram"></i></a></li>
+                    <li><a class="btn" href="#"><i class="fab fa-youtube"></i></a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col line">
+                <div>
+                    <h2>Site</h2>
+                    <ul>
+                        <li>BRASIL</li>
+                    </ul>
+                </div>
+                <i class="fas fa-cog"></i>
+            </div>
+
+            <div class="footer-col line">
+                <div>
+                    <h2>Moeda</h2>
+                    <ul>
+                        <li>R$ BRL</li>
+                    </ul>
+                </div>
+                <i class="fas fa-cog"></i>
+            </div>
+            
+            <div class="text-center footer-autorais">
+                <a class="anchor" href="../../../../index.html"><span>T</span>rips <span>&</span> <span>H</span>otels</a>
+                <span>Todos os Direitos Reservados</span>
+            </div>
+            
+        </div>
+    </footer>
+    <!-- end /FOOTER -->
+
+
+    <!--jquery menu toggle-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!--menuslider-->
+    <script src="../../js/menu-slider.js"></script>
+    <!--menubar-->
+    <script src="../../js/script.js"></script>
+    <!--calendário-->
+    <script src="../../js/window-date-picker.js"></script>
+    <!--slides-->
+    <script src="../../js/section-slider-1.js"></script>
+    <script src="../../js/section-slider-2.js"></script>
+    <script src="../../js/section-slider-3.js"></script>
+    <script src="../../js/section-slider-4.js"></script>
+    <script>
+        const picker = new WindowDatePicker({
+            el: '#picker',
+            toggleEl: '.toggle',
+            inputEl: '#demo',
+            type: 'DATEHOUR',
+            hourType: '24',
+            showButtons: true,
+            inputToggle: true
+        });
+        const picker2 = new WindowDatePicker({
+            el: '#picker2',
+            toggleEl: '.toggle2',
+            inputEl: '#demo2',
+            type: 'DATEHOUR',
+            hourType: '24',
+            showButtons: true,
+            inputToggle: true
+        });
+    </script>
+</body>
+</html>

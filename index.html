@@ -1,0 +1,971 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <meta name="description" content="Site expecializado em viagens e hotéis, são centenas de destinos e hotéis com os melhores preços, tudo a um clique.">
+        <meta name="keywords" content="Hotéis, Viagens, Passagens, Reservas">
+        <meta name="robots" content="index, follow">
+        <meta name="author" content="Johnny Ruffini">
+
+        <title>Trips&Hotels.com</title>
+        <link rel="shortcut icon" href="images/travel-globe-144.png">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="css/fontawesome-all.min.css">
+        <!-- calendário -->
+        <link rel="stylesheet" href="css/window-date-picker.css">
+        <!-- style -->
+        <link rel="stylesheet" type="text/css" href="css/Style.css">
+    </head>
+
+    <body>
+        <!-- Start HEADER-MENUBAR -->
+    <section class="section">
+        <div class="bg-black">
+            <header class="header content">
+                <a class="anchor" href="../../index.html"><span>T</span>rips <span>&</span> <span>H</span>otels</a>
+
+                <a href="#" class="nav-toggle fl-right">
+                    <i class="fas fa-bars"></i> MENU
+                </a>
+
+                <nav class="nav">
+                    <p class="text-right">
+                        <span class="nav-close">
+                            <i class="fas fa-times"></i>
+                        </span>
+                    </p>
+                    <ul>
+                        <li><a href="#">Passagens aéreas</a></li>
+                        <li><a href="#">Hotéis</a></li>
+                        <li><a href="#">Carros</a></li>
+                        <li><a href="#">Entrar</a></li>
+                    </ul>
+                </nav>
+            </header>
+        </div>
+    </section>
+    <!-- End /HEADER-MENUBAR -->
+
+        <!-- Start SEARCH -->
+        <section class="section">
+            <div class="search-box bg-fixed">                
+                <!-- slider container -->
+                <section id="slider-container">
+                    <div class="slider fade bg-fixed" id="slide-0">
+                    <!-- slide image -->
+                    </div>                  
+                    <div class="slider fade bg-fixed" id="slide-1">
+                    <!-- slide image -->
+                    </div>                    
+                    <div class="slider fade bg-fixed" id="slide-2">
+                    <!-- slide image -->
+                    </div>                    
+                    <div class="slider fade bg-fixed" id="slide-3">
+                    <!-- slide image -->
+                    </div>                    
+                    
+                    <!-- dots -->
+                    <div id="dots-wrapper" class="center_x">
+                        <!--dot navigation for each slide-->
+                        <div class="dots-navigation"></div>
+                        <div class="dots-navigation"></div>
+                        <div class="dots-navigation"></div>
+                        <div class="dots-navigation"></div>  
+                    </div>
+                </section>
+                <!-- fim/slider container -->
+                <header>
+                    <p class="tagline">Encontre hotéis, pousadas e hotels para suas férias</p>
+                </header>
+
+                <form name="formsearch" method="post" action="">
+                    <input type="search" name="busca" id="busca" placeholder="Pesquisar" />
+                    <div id="picker"></div>
+                    <input id="demo" class="toggle" placeholder="Entrada">
+                    <div id="picker2"></div>
+                    <input id="demo2" class="toggle2" placeholder="Saída">
+                    <!--por enquanto coloquei um input, más um select talvez seja melhor-->
+                    <input type="text" name="Nroom" id="Iroom" placeholder="1 Quarto, 2 hóspedes">
+                    <button type="submit"><i class="fas fa-search"></i></button>
+                </form>
+                <!--typewriter-->
+                <div class="typer-content">
+                    <div id="typewriter"></div>
+                </div>
+                <!--fim/typewriter-->
+            </div>
+
+        </section>
+        <!-- End /SEARCH  -->
+        
+        <!-- start DESTINOS -->
+        <section class="section">
+            <div class="content">
+                <div class="container-box">
+                    <h2>Cidades mais populares</h2>
+                    <div class="city">
+                        <div class="cityImage">
+                            <!--imagem da cidade-->
+                        </div>
+                        <div class="cityInfo">
+                            <!--Hotéis em //Passagens em-->
+                            <span>Hotéis em</span>
+                            <!--Nome da cidade-->
+                            <h4>Nova York</h4>
+                        </div>
+                    </div>
+                    <div class="city">
+                        <div class="cityImage">
+                            <!--imagem da cidade-->
+                        </div>
+                        <div class="cityInfo">
+                            <span>Hotéis em</span>
+                            <h4>Miami</h4>
+                        </div>
+                    </div>
+                    <div class="city">
+                        <div class="cityImage">
+                            <!--imagem da cidade-->
+                        </div>
+                        <div class="cityInfo">
+                            <span>Hotéis em</span>
+                            <h4>São Paulo</h4>
+                        </div>
+                    </div>
+                    <div class="city">
+                        <div class="cityImage">
+                            <!--imagem da cidade-->
+                        </div>
+                        <div class="cityInfo">
+                            <span>Hotéis em</span>
+                            <h4>Porto</h4>
+                        </div>
+                    </div>
+                    <div class="city">
+                        <div class="cityImage">
+                            <!--imagem da cidade-->
+                        </div>
+                        <div class="cityInfo">
+                            <span>Hotéis em</span>
+                            <!--Nome da cidade-->
+                            <h4>Lisboa</h4>
+                        </div>
+                    </div>
+                    <div class="city">
+                        <div class="cityImage">
+                            <!--imagem da cidade-->
+                        </div>
+                        <div class="cityInfo">
+                            <span>Hotéis em</span>
+                            <h4>Salvador</h4>
+                        </div>
+                    </div>
+                    <div class="city">
+                        <div class="cityImage">
+                            <!--imagem da cidade-->
+                        </div>
+                        <div class="cityInfo">
+                            <span>Hotéis em</span>
+                            <h4>Londres</h4>
+                        </div>
+                    </div>
+                    <div class="city">
+                        <div class="cityImage">
+                            <!--imagem da cidade-->
+                        </div>
+                        <div class="cityInfo">
+                            <span>Hotéis em</span>
+                            <h4>Rio de Janeiro</h4>
+                        </div>
+                    </div>
+                    <div class="city">
+                        <div class="cityImage">
+                            <!--imagem da cidade-->
+                        </div>
+                        <div class="cityInfo">
+                            <span>Hotéis em</span>
+                            <!--Nome da cidade-->
+                            <h4>Paris</h4>
+                        </div>
+                    </div>
+                    <div class="city">
+                        <div class="cityImage">
+                            <!--imagem da cidade-->
+                        </div>
+                        <div class="cityInfo">
+                            <span>Hotéis em</span>
+                            <h4>Recife</h4>
+                        </div>
+                    </div>
+                    <div class="city">
+                        <div class="cityImage">
+                            <!--imagem da cidade-->
+                        </div>
+                        <div class="cityInfo">
+                            <span>Hotéis em</span>
+                            <h4>Roma</h4>
+                        </div>
+                    </div>
+                    <div class="city">
+                        <div class="cityImage">
+                            <!--imagem da cidade-->
+                        </div>
+                        <div class="cityInfo">
+                            <span>Hotéis em</span>
+                            <h4>Fortaleza</h4>
+                        </div>
+                    </div>
+                    <div class="city">
+                        <div class="cityImage">
+                            <!--imagem da cidade-->
+                        </div>
+                        <div class="cityInfo">
+                            <span>Hotéis em</span>
+                            <!--Nome da cidade-->
+                            <h4>Buenos Aires</h4>
+                        </div>
+                    </div>
+                    <div class="city">
+                        <div class="cityImage">
+                            <!--imagem da cidade-->
+                        </div>
+                        <div class="cityInfo">
+                            <span>Hotéis em</span>
+                            <h4>Porto Alagre</h4>
+                        </div>
+                    </div>
+                    <div class="city">
+                        <div class="cityImage">
+                            <!--imagem da cidade-->
+                        </div>
+                        <div class="cityInfo">
+                            <span>Hotéis em</span>
+                            <h4>Brasília</h4>
+                        </div>
+                    </div>
+                    <div class="city">
+                        <div class="cityImage">
+                            <!--imagem da cidade-->
+                        </div>
+                        <div class="cityInfo">
+                            <span>Hotéis em</span>
+                            <h4>Madri</h4>
+                        </div>
+                    </div>
+                    <div class="city">
+                        <div class="cityImage">
+                            <!--imagem da cidade-->
+                        </div>
+                        <div class="cityInfo">
+                            <span>Hotéis em</span>
+                            <!--Nome da cidade-->
+                            <h4>Santiago</h4>
+                        </div>
+                    </div>
+                    <div class="city">
+                        <div class="cityImage">
+                            <!--imagem da cidade-->
+                        </div>
+                        <div class="cityInfo">
+                            <span>Hotéis em</span>
+                            <h4>Orlando</h4>
+                        </div>
+                    </div>
+                    <div class="city">
+                        <div class="cityImage">
+                            <!--imagem da cidade-->
+                        </div>
+                        <div class="cityInfo">
+                            <span>Hotéis em</span>
+                            <h4>Milão</h4>
+                        </div>
+                    </div>
+                    <div class="city">
+                        <div class="cityImage">
+                            <!--imagem da cidade-->
+                        </div>
+                        <div class="cityInfo">
+                            <span>Hotéis em</span>
+                            <h4>Belo Horizonte</h4>
+                        </div>
+                    </div>
+                    <div class="city">
+                        <div class="cityImage">
+                            <!--imagem da cidade-->
+                        </div>
+                        <div class="cityInfo">
+                            <span>Hotéis em</span>
+                            <h4>Maceio</h4>
+                        </div>
+                    </div>
+                    <div class="city">
+                        <div class="cityImage">
+                            <!--imagem da cidade-->
+                        </div>
+                        <div class="cityInfo">
+                            <span>Hotéis em</span>
+                            <h4>Barcelona</h4>
+                        </div>
+                    </div>
+                    <div class="city">
+                        <div class="cityImage">
+                            <!--imagem da cidade-->
+                        </div>
+                        <div class="cityInfo">
+                            <span>Hotéis em</span>
+                            <h4>Curitiba</h4>
+                        </div>
+                    </div>
+                    <div class="city">
+                        <div class="cityImage">
+                            <!--imagem da cidade-->
+                        </div>
+                        <div class="cityInfo">
+                            <span>Hotéis em</span>
+                            <h4>Florianópolis</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section> 
+        
+        <section class="section">
+            <div class="content">
+                <div class="container-box">
+                    <h2>Paises mais populares</h2>
+                    <div class="city">
+                        <div class="cityImage">
+                            <!--imagem da cidade-->
+                        </div>
+                        <div class="cityInfo">
+                            <!--Hotéis em //Passagens em-->
+                            <span>Hotéis em</span>
+                            <!--Nome da cidade-->
+                            <h4>Portugual</h4>
+                        </div>
+                    </div>
+                    <div class="city">
+                        <div class="cityImage">
+                            <!--imagem da cidade-->
+                        </div>
+                        <div class="cityInfo">
+                            <span>Hotéis em</span>
+                            <h4>França</h4>
+                        </div>
+                    </div>
+                    <div class="city">
+                        <div class="cityImage">
+                            <!--imagem da cidade-->
+                        </div>
+                        <div class="cityInfo">
+                            <span>Hotéis em</span>
+                            <h4>Estados Unidos</h4>
+                        </div>
+                    </div>
+                    <div class="city">
+                        <div class="cityImage">
+                            <!--imagem da cidade-->
+                        </div>
+                        <div class="cityInfo">
+                            <span>Hotéis em</span>
+                            <h4>Canadá</h4>
+                        </div>
+                    </div>
+                    <div class="city">
+                        <div class="cityImage">
+                            <!--imagem da cidade-->
+                        </div>
+                        <div class="cityInfo">
+                            <span>Hotéis em</span>
+                            <!--Nome da cidade-->
+                            <h4>Itália</h4>
+                        </div>
+                    </div>
+                    <div class="city">
+                        <div class="cityImage">
+                            <!--imagem da cidade-->
+                        </div>
+                        <div class="cityInfo">
+                            <span>Hotéis em</span>
+                            <h4>Brasil</h4>
+                        </div>
+                    </div>
+                    <div class="city">
+                        <div class="cityImage">
+                            <!--imagem da cidade-->
+                        </div>
+                        <div class="cityInfo">
+                            <span>Hotéis em</span>
+                            <h4>Espanha</h4>
+                        </div>
+                    </div>
+                    <div class="city">
+                        <div class="cityImage">
+                            <!--imagem da cidade-->
+                        </div>
+                        <div class="cityInfo">
+                            <span>Hotéis em</span>
+                            <h4>Holanda</h4>
+                        </div>
+                    </div>
+                    <div class="city">
+                        <div class="cityImage">
+                            <!--imagem da cidade-->
+                        </div>
+                        <div class="cityInfo">
+                            <span>Hotéis em</span>
+                            <!--Nome da cidade-->
+                            <h4>Chile</h4>
+                        </div>
+                    </div>
+                    <div class="city">
+                        <div class="cityImage">
+                            <!--imagem da cidade-->
+                        </div>
+                        <div class="cityInfo">
+                            <span>Hotéis em</span>
+                            <h4>Argentina</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- end /DESTINOS -->
+        
+        <!-- PARALLAX -->
+        <div class="parallax bg-fixed">
+            <div class="content">
+                <header> <!--passar classe unica-->
+                    <h2>Um pouco mais sobre hotéis na Trips & Hotels</h2> 
+                    <p>Descubra por que as pessoas usam a trips & hotels para procurar hotéis baratos</p>
+                </header>
+                <div class="row-sobre">
+                    <div class="col-sobre">
+                        <div class="parallax-sobre">
+                            <h3>Garantia de melhor preço</h3>
+                            <p>É realmente mais barato? Nossa garantia de melhor preço traz a paz de espírito que você precisa, sabendo que terá os melhores preços online para hotéis baratos</p>
+                            <a href="#">Saiba mais</a>
+                        </div>
+                    </div>
+                    <div class="col-sobre">
+                        <div class="parallax-sobre">
+                            <h3>Melhores preços</h3>
+                            <p>Buscamos em todos os cantos da internet - dos principais sites de viagens aos sites de hotéis independentes - para que você possa encontrar hotéis baratos em todo mundo</p>
+                        </div>
+                    </div>
+                    <div class="col-sobre">
+                        <div class="parallax-sobre">
+                            <h3>Avaliação dos hospédes</h3>
+                            <p>As fotos dos hotéis e classificação por estrelas não lhe dizem tudo. Buscamos os principais sites de reserva de hotéis e reunimos comentários de hóspedes para que você possa saber todos os detalhes</p>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        <!-- end /PARALLAX -->
+        
+        <!-- start DESTAQUES -->
+        <section class="section">
+            <div class="content">
+                <header class="section-header">
+                    <h2>Destaque da semana</h2>
+                    <h3>Destinos populares</h3>
+                </header>
+                
+                <div class="row">
+                    <div class="destinos-col">
+                        <div class="box">
+                            <div class="box-name">
+                                Barcelona
+                            </div>
+                            <div class="box-cover">
+                                <img src="images/Barcelona/icone-1.jpg" alt="" />
+                            </div>
+                            <div class="box-detalhes">
+                                <div class="box-detalhes-info">
+                                    <a href="#">Hotéis</a>
+                                    <a href="#">Passagens</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="destinos-col">
+                        <div class="box">
+                            <div class="box-name">
+                                Paris
+                            </div>
+                            <div class="box-cover">
+                                <img src="images/Lisboa/icone-1.jpg" alt="" />
+                            </div>
+                            <div class="box-detalhes">
+                                <div class="box-detalhes-info">
+                                    <a href="#">Hotéis</a>
+                                    <a href="#">Passagens</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="destinos-col">
+                        <div class="box">
+                            <div class="box-name">
+                                Lisboa
+                            </div>
+                            <div class="box-cover">
+                                <img src="images/Orlando/icone-1.jpg" alt="" />
+                            </div>
+                            <div class="box-detalhes">
+                                <div class="box-detalhes-info">
+                                    <a href="#">Hotéis</a>
+                                    <a href="#">Passagens</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- start carregar mais -->
+                <div class="row">
+                    <div class="content text-right">
+                        <button class="loadmore">CARREGAR MAIS</button>
+                    </div>
+                </div>
+                <!-- end /carregar mais -->
+            </div>
+        
+            <div class="content">
+                <header class="section-header">
+                    <h3>Hotéis internacionais</h3>
+                </header>
+                
+                <div class="row">
+                    <div class="destinos-col hotel-col">
+                        <div class="box">
+                            <div class="box-cover">
+                                <!-- slide -->
+                                <div class="slide-one fade" id="slide-0">
+                                <!-- slide image -->
+                                <img src="images/Barcelona/El_Avenida_Palace_Hotel/El-Avenida-Palace-Hotel---1.jpg" alt="First Image">
+                                </div>
+                                <div class="slide-one fade" id="slide-1">
+                                <!-- slide image -->
+                                <img src="images/Barcelona/El_Avenida_Palace_Hotel/El-Avenida-Palace-Hotel---2.jpg" alt="Second Image">
+                                </div>
+                                <div class="slide-one fade" id="slide-2">
+                                <!-- slide image -->
+                                <img src="images/Barcelona/El_Avenida_Palace_Hotel/El-Avenida-Palace-Hotel---3.jpg" alt="Third Image">
+                                </div>
+                                <div class="slide-one fade" id="slide-3">
+                                <!-- slide image -->
+                                <img src="images/Barcelona/El_Avenida_Palace_Hotel/El-Avenida-Palace-Hotel---4.jpg" alt="Fourth Image">
+                                </div>
+    
+                                <!-- dots -->
+                                <!-- dot navigation for each slide-->
+                                <div id="dots-wrapper">                                
+                                    <div class="dot-one-navigation"></div>
+                                    <div class="dot-one-navigation"></div>
+                                    <div class="dot-one-navigation"></div>
+                                    <div class="dot-one-navigation"></div>
+                                </div> 
+                            </div>                       
+                        </div>
+                        <div class="box-detalhes-hotel">
+                            <div class="headerHotel">
+                                <div class="nameHotel">El Avenida Palace Hotel</div>
+                                <div class="starsHotel">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <span>Hotel</span>
+                                </div>
+                            </div>
+                            <div class="addres">
+                                <p><i class="fas fa-map-marker-alt"></i> Gran Via, 605, Eixample, 08007 Barcelona, Espanha</p>
+                            </div>
+                            <div class="infoContainer">
+                                <div class="nota">
+                                    <span>8.7</span>
+                                    <span>(4.220 avaliações)</span>
+                                </div>
+                                <div class="borderHotel"></div>
+                                <div class="preco">
+                                    <span>$ 230</span>
+                                    <a href="#">Ver oferta</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="destinos-col hotel-col">
+                        <div class="box">
+                            <div class="box-cover">
+                                <!-- slide -->
+                                <div class="slide-two fade" id="slide-0">
+                                <!-- slide image -->
+                                <img src="images/Paris/Le_Belmont_Champs_Elysées/Le-Belmont-Champs-Elysées---1.jpg" alt="First Image">
+                                </div>
+                                <div class="slide-two fade" id="slide-1">
+                                <!-- slide image -->
+                                <img src="images/Paris/Le_Belmont_Champs_Elysées/Le-Belmont-Champs-Elysées---2.jpg" alt="Second Image">
+                                </div>
+                                <div class="slide-two fade" id="slide-2">
+                                <!-- slide image -->
+                                <img src="images/Paris/Le_Belmont_Champs_Elysées/Le-Belmont-Champs-Elysées---3.jpg" alt="Third Image">
+                                </div>
+                                <div class="slide-two fade" id="slide-3">
+                                <!-- slide image -->
+                                <img src="images/Paris/Le_Belmont_Champs_Elysées/Le-Belmont-Champs-Elysées---4.jpg" alt="Fourth Image">
+                                </div>
+    
+                                <!-- dots -->
+                                <!-- dot navigation for each slide-->
+                                <div id="dots-wrapper">                                
+                                    <div class="dot-two-navigation"></div>
+                                    <div class="dot-two-navigation"></div>
+                                    <div class="dot-two-navigation"></div>
+                                    <div class="dot-two-navigation"></div>
+                                </div>
+                            </div>                        
+                        </div>
+                        <div class="box-detalhes-hotel">
+                            <div class="headerHotel">
+                                <div class="nameHotel">Le Belmont Champs Elysées</div>
+                                <div class="starsHotel">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <span>Hotel</span>
+                                </div>
+                            </div>
+                            <div class="addres">
+                                <p><i class="fas fa-map-marker-alt"></i> 30, Rue de Bassano, 16º arr., 75016 Paris, França - Perto do metrô</p>
+                            </div>
+                            <div class="infoContainer">
+                                <div class="nota">
+                                    <span>8.3</span>
+                                    <span>(613 avaliações)</span>
+                                </div>
+                                <div class="borderHotel"></div>
+                                <div class="preco">
+                                    <span>$ 470</span>
+                                    <a href="#">Ver oferta</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="destinos-col hotel-col">
+                        <div class="box">
+                            <div class="box-cover">
+                                <!-- slide -->
+                                <div class="slide-three fade" id="slide-0">
+                                <!-- slide image -->
+                                <img src="images/Orlando/Grand_Orlando_Resort_at_Celebration/Grand-Orlando-Resort-at-Celebration---1.jpg" alt="First Image">
+                                </div>
+                                <div class="slide-three fade" id="slide-1">
+                                <!-- slide image -->
+                                <img src="images/Orlando/Grand_Orlando_Resort_at_Celebration/Grand-Orlando-Resort-at-Celebration---2.jpg" alt="Second Image">
+                                </div>
+                                <div class="slide-three fade" id="slide-2">
+                                <!-- slide image -->
+                                <img src="images/Orlando/Grand_Orlando_Resort_at_Celebration/Grand-Orlando-Resort-at-Celebration---3.jpg" alt="Third Image">
+                                </div>
+                                <div class="slide-three fade" id="slide-3">
+                                <!-- slide image -->
+                                <img src="images/Orlando/Grand_Orlando_Resort_at_Celebration/Grand-Orlando-Resort-at-Celebration---4.jpg" alt="Fourth Image">
+                                </div>
+    
+                                <!-- dots -->
+                                <!-- dot navigation for each slide--> 
+                                <div id="dots-wrapper">                                
+                                    <div class="dot-three-navigation"></div>
+                                    <div class="dot-three-navigation"></div>
+                                    <div class="dot-three-navigation"></div>
+                                    <div class="dot-three-navigation"></div>
+                                </div>
+                            </div>                        
+                        </div>
+                        <div class="box-detalhes-hotel">
+                            <div class="headerHotel">
+                                <div class="nameHotel">El Avenida Palace Hotel</div>
+                                <div class="starsHotel">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <span>Hotel</span>
+                                </div>
+                            </div>
+                            <div class="addres">
+                                <p><i class="fas fa-map-marker-alt"></i> 2900 Parkway Boulevard, Celebration, Orlando, 34747, Estados Unidos</p>
+                            </div>
+                            <div class="infoContainer">
+                                <div class="nota">
+                                    <span>7.1</span>
+                                    <span>(5.129 avaliações)</span>
+                                </div>
+                                <div class="borderHotel"></div>
+                                <div class="preco">
+                                    <span>$ 420</span>
+                                    <a href="#">Ver oferta</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- start carregar mais -->
+                <div class="row">
+                    <div class="content text-right">
+                        <button class="loadmore">CARREGAR MAIS</button>
+                    </div>
+                </div>
+                <!-- end /carregar mais -->
+            </div>
+        
+            <div class="content">
+                <header class="section-header">
+                    <h3>Top hotéis fazenda</h3>
+                </header>
+                
+                <div class="row">
+                    <div class="destinos-col">
+                        <div class="box">
+                            <div class="box-name">
+                                Barcelona
+                            </div>
+                            <div class="box-cover">
+                                <img src="images/Barcelona/icone-1.jpg" alt="" />
+                            </div>
+                            <div class="box-detalhes">
+                                <div class="box-detalhes-info">
+                                    <a href="#">Hotéis</a>
+                                    <a href="#">Passagens</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="destinos-col">
+                        <div class="box">
+                            <div class="box-name">
+                                Paris
+                            </div>
+                            <div class="box-cover">
+                                <img src="images/Lisboa/icone-1.jpg" alt="" />
+                            </div>
+                            <div class="box-detalhes">
+                                <div class="box-detalhes-info">
+                                    <a href="#">Hotéis</a>
+                                    <a href="#">Passagens</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="destinos-col">
+                        <div class="box">
+                            <div class="box-name">
+                                Lisboa
+                            </div>
+                            <div class="box-cover">
+                                <img src="images/Orlando/icone-1.jpg" alt="" />
+                            </div>
+                            <div class="box-detalhes">
+                                <div class="box-detalhes-info">
+                                    <a href="#">Hotéis</a>
+                                    <a href="#">Passagens</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- start carregar mais -->
+                <div class="row">
+                    <div class="content text-right">
+                        <button class="loadmore">CARREGAR MAIS</button>
+                    </div>
+                </div>
+                <!-- end /carregar mais -->
+            </div>
+        </section>
+        <!-- end /DESTAQUES -->
+        
+        <!-- start TESTEMUNHAS -->
+        <section class="section testemunhas bg-fixed">
+            <div class="content">
+                <div class="testimonials" id="testimonials">
+                    <h4>Testemunhas</h4>
+
+                    <div class="rowTestimunials">
+                        <div class="colTestimunials">
+                            <div class="testimonial">
+                                <img src="images/testemunha-01.png" alt="Testemunha mulher">
+                                <div class="nameTestimonials">Rose Nihil</div>
+                                <div class="stars">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                </div>
+
+                                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eligendi blanditiis minima nostrum possimus ipsam sit facere magni!</p>
+                            </div>
+                        </div>
+
+                        <div class="colTestimunials">
+                            <div class="testimonial">
+                                <img src="images/testemunha-02.png" alt="Testemunha mulher">
+                                <div class="nameTestimonials">John Muller</div>
+                                <div class="stars">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                </div>
+
+                                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eligendi blanditiis minima nostrum possimus ipsam sit facere magni!</p>
+                            </div>
+                        </div>
+
+                        <div class="colTestimunials">
+                            <div class="testimonial">
+                                <img src="images/testemunha-06.png" alt="Testemunha mulher">
+                                <div class="nameTestimonials">Michael elit</div>
+                                <div class="stars">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                </div>
+
+                                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eligendi blanditiis minima nostrum possimus ipsam sit facere magni!</p>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- end /TESTEMUNHAS -->
+        
+        
+        <!-- start FOOTER -->
+        <footer class="footer">
+            <div class="content">
+                <div class="footer-col">
+                    <ul class="footer-col-links">
+                        <li><a href="#">Sobre nós</a></li>
+                        <li><a href="#">Vagas</a></li>
+                        <li><a href="#">Imprensa</a></li>
+                        <li><a href="#">Termos de Uso</a></li>
+                        <li><a href="#">Cookies e Política de Privacidade</a></li>
+                        <li><a href="#">Companhias aeréas</a></li>
+                        <li><a href="#">Apps</a></li>
+                        <li><a href="#">Ajuda</a></li>
+                        <li><a href="#">Contate-nos</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <ul class="footer-col-social">
+                        <li><a class="btn" href="#"><i class="fab fa-facebook-f"></i></a></li>
+                        <li><a class="btn" href="#"><i class="fab fa-twitter"></i></a></li>
+                        <li><a class="btn" href="#"><i class="fab fa-google"></i></a></li>
+                        <li><a class="btn" href="#"><i class="fab fa-instagram"></i></a></li>
+                        <li><a class="btn" href="#"><i class="fab fa-youtube"></i></a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col line">
+                    <div>
+                        <h2>Site</h2>
+                        <ul>
+                            <li>BRASIL</li>
+                        </ul>
+                    </div>
+                    <i class="fas fa-cog"></i>
+                </div>
+
+                <div class="footer-col line">
+                    <div>
+                        <h2>Moeda</h2>
+                        <ul>
+                            <li>R$ BRL</li>
+                        </ul>
+                    </div>
+                    <i class="fas fa-cog"></i>
+                </div>
+                
+                <div class="text-center footer-autorais">
+                    <a class="anchor" href="index.html"><span>T</span>rips <span>&</span> <span>H</span>otels</a>
+                    <span>Todos os Direitos Reservados</span>
+                </div>
+                
+            </div>
+        </footer>
+        <!-- end /FOOTER -->
+        
+    <!--jquery menu toggle-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!--menubar-->
+    <script src="js/script.js"></script>
+    <!--slider-->
+    <script src="js/menu-slider.js"></script>
+    <!--calendário-->
+    <script src="js/window-date-picker.js"></script>
+    <!--typewriter-->
+    <script src="js/core.js"></script>
+    <!--section slider-->
+    <script src="js/section-slider-1.js"></script>
+    <script src="js/section-slider-2.js"></script>
+    <script src="js/section-slider-3.js"></script>
+
+    <script>
+        const picker = new WindowDatePicker({
+            el: '#picker',
+            toggleEl: '.toggle',
+            inputEl: '#demo',
+            type: 'DATEHOUR',
+            hourType: '24',
+            showButtons: true,
+            inputToggle: true
+        });
+        const picker2 = new WindowDatePicker({
+            el: '#picker2',
+            toggleEl: '.toggle2',
+            inputEl: '#demo2',
+            type: 'DATEHOUR',
+            hourType: '24',
+            showButtons: true,
+            inputToggle: true
+        });
+    </script>
+
+    <script type="text/javascript">
+        const instance = new Typewriter('#typewriter', {
+            loop: true,
+        });
+
+        instance.typeString('"Viajar não é dispesa, é investimento!"')
+        .pauseFor(1000)
+        .deleteAll(15)
+        .typeString('"<strong>Viajar!</strong> A melhor forma de se <em>perder</em> e de se <em>encontrar</em> ao mesmo tempo!"')
+        .deleteAll(15)
+        .typeString("A felicidade não é um <em>destino</em>, é uma <em>viagem!</em>")
+        .deleteAll(15)
+        .typeString("As melhores lembranças são feitas de: <em>Boa comida, bons amigos e bons momentos!</em>")
+        .deleteAll(15)
+        .start();
+    </script>
+
+    </body>
+</html>

@@ -1,0 +1,35 @@
+.Lgallery {
+  padding: 80px 0 0;
+}
+
+.TemplateLgallery {
+  position: relative;
+  width: 300px;
+  height: auto;
+  margin: 0 20px 30px;
+}
+
+.TemplateLgallery-Item {
+  width: 100%;
+  height: 200px;
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4); /* box-shadow da imagem principal */
+  overflow-y: hidden;
+  cursor: pointer;
+}
+
+.TemplateLgallery-Item img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* sem está propriedade, a imagem se destorce para caber toda no quadro */
+}
+
+@media screen and (min-width: 1024px) {
+  .TemplateLgallery {
+    transition: all 0.5s;
+  }
+  .TemplateLgallery:hover { /* EFEITO DE AFASTAMENTO */
+    transform: scale(0.8) rotate3d(-1, 1, 0, -20deg);
+    box-shadow: -10px -10px 2px 0.3px rgba(0, 0, 0, 0.6), -20px -20px 3px 0.3px rgba(0, 0, 0, 0.3), -30px -30px 4px 0.3px rgba(0, 0, 0, 0.1);
+  }
+}

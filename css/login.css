@@ -1,0 +1,99 @@
+body {
+       background: #333;
+       margin: 0;
+       padding: 0;
+       font-family: "Montserrat", sans-serif;
+}
+.container {
+       position: absolute;
+       top: 50%;
+       left: 50%;
+       transform: translate(-50%,-50%);
+       width: 26%; /* +/- 360 */
+       height: 90%; /* +/- 550 */
+       text-align: center;
+       background: url(../images/bg.jpg);     
+       color: white;      
+       box-shadow: 2px 2px 4px dodgerblue;   
+}
+.inputWithIcon{
+       position: relative;
+       width: max-content;
+       margin: 0 auto;
+}
+.container h1 {
+       font-size: 2.5em; /* 40 / 16 */
+       margin-top: 34.7222%; /* 125 / 360 */
+       margin-bottom: 16.6666%; /* 60 / 360 */
+       text-transform: uppercase;
+}
+.test {
+       width: 245px; /* 245 / 360 */
+       height: 40px;
+       background: none;
+       border: none;
+       outline: none;
+       text-align: left;       
+       background: #ffffffb3;   
+       color: #333; 
+       padding-left: 40px;
+       margin: 5px auto;   
+       border-radius: 10px;
+       font-family: "Montserrat", sans-serif;
+       font-size: 14px;      
+       box-sizing: border-box; 
+       transition: 0.25s;
+}
+.test:focus {
+       width: 280px;
+}
+form i {
+       position: absolute;
+       top: 9px;
+       left: 0;
+       padding: 10px 9px;
+       color: #333;
+}
+.btn {
+       display: block;
+       width: 68.0555%; /* 245 / 360 */
+       height: 40px; /* não está aceitando porcentagem */
+       border: none;
+       background: dodgerblue; 
+       border-radius: 10px; /* 245 / 360 */
+       margin: 14px auto; /* 245 / 360 */  
+       font-family: "Montserrat", sans-serif;
+       font-size: 1em; /* 16 / 16 */
+       color: white;
+       cursor: pointer;
+}
+.btn:hover {
+       background: #3498db;
+}
+.b1 {
+       display: block;
+       width: 72.2222%; /* 260 / 360 */
+       padding: 2.7777% 0; /* 10 / 360 */
+       text-decoration: none;
+       color: white;
+       text-align: center;
+       margin: auto;
+       transition: 0.4s all;
+       text-transform: uppercase;
+}
+.b2 {
+       position: absolute;
+       bottom: 14.5454%; /* 80 / 550 */
+       left: 50%;
+       transform: translateX(-50%);
+       width: 72.2222%; /* 260 / 360 */
+       padding: 2.7777% 0; /* 10 / 360 */
+       text-decoration: none;
+       color: dodgerblue;   
+       text-align: center;
+       transition: 0.4s all;
+       text-transform: uppercase;
+}
+a:hover {
+       background: #00000040;
+}

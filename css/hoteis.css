@@ -1,0 +1,1387 @@
+@charset "UTF-8";
+/* RESET
+-----------------------------------------*/
+*{margin: 0; padding: 0; font-size: 100%; box-sizing: border-box; font-family: 'Oxygen', sans-serif}
+
+ol, ul, li{list-style: none;}
+a{text-decoration: none; color: inherit; transition: all .4s ease-in-out;}
+a:hover{color: dodgerblue;}
+img{max-width: 100%;}
+/* end /RESET
+-----------------------------------------*/
+
+/* -----------------------------------------------------------------------------
+Fonts
+----------------------------------------------------------------------------- */
+@font-face {
+    font-family: 'Oxygen';
+    font-style: normal;
+    font-weight: 300;
+    src: url("../webfonts/oxygen/oxygen-v5-latin-300.eot");
+    src: local("Oxygen Light"), local("Oxygen-Light"), url("../webfonts/oxygen/oxygen-v5-latin-300.eot?#iefix") format("embedded-opentype"), url("../webfonts/oxygen/oxygen-v5-latin-300.woff2") format("woff2"), url("../webfonts/oxygen/oxygen-v5-latin-300.woff") format("woff"), url("../webfonts/oxygen/oxygen-v5-latin-300.ttf") format("truetype"), url("../webfonts/oxygen/oxygen-v5-latin-300.svg#Oxygen") format("svg");
+}
+
+@font-face {
+    font-family: 'Oxygen';
+    font-style: normal;
+    font-weight: 400;
+    src: url("../webfonts/oxygen/oxygen-v5-latin-regular.eot");
+    src: local("Oxygen"), local("Oxygen-Regular"), url("../webfonts/oxygen/oxygen-v5-latin-regular.eot?#iefix") format("embedded-opentype"), url("../webfonts/oxygen/oxygen-v5-latin-regular.woff2") format("woff2"), url("../webfonts/oxygen/oxygen-v5-latin-regular.woff") format("woff"), url("../webfonts/oxygen/oxygen-v5-latin-regular.ttf") format("truetype"), url("../webfonts/oxygen/oxygen-v5-latin-regular.svg#Oxygen") format("svg");
+}
+
+@font-face {
+    font-family: 'Oxygen';
+    font-style: normal;
+    font-weight: 700;    
+    src: url("../webfonts/oxygen/oxygen-v5-latin-700.eot");
+    src: local("Oxygen Bold"), local("Oxygen-Bold"), url("../webfonts/oxygen/oxygen-v5-latin-700.eot?#iefix") format("embedded-opentype"), url("../webfonts/oxygen/oxygen-v5-latin-700.woff2") format("woff2"), url("../webfonts/oxygen/oxygen-v5-latin-700.woff") format("woff"), url("../webfonts/oxygen/oxygen-v5-latin-700.ttf") format("truetype"), url("../webfonts/oxygen/oxygen-v5-latin-700.svg#Oxygen") format("svg");
+}
+@import url("https://use.fontawesome.com/releases/v5.13.0/css/all.css");
+/* -----------------------------------------------------------------------------
+Fonts
+----------------------------------------------------------------------------- */
+
+/* GERAIS
+-----------------------------------------*/
+.section{
+    float: left;
+    width: 100%;
+    background: #f1f1f1;
+}
+.content{
+    max-width: 71%; /* +- 960 */
+    margin: 0 auto;
+}
+/* end /GERAIS
+-----------------------------------------*/
+
+/* AUXILIARES
+-----------------------------------------*/
+.bg-fixed {
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+.bg-black {
+    width: 100%;
+    background: rgb(0, 0, 0);
+}
+
+/* text align */
+.text-center{text-align: center;}
+.text-left{text-align: left;}
+.text-right{text-align: right;}
+
+/* float */
+.fl-left{float: left;}
+.fl-right{float: right;}
+/* end /AUXILIARES
+-----------------------------------------*/
+
+
+/* HEADER
+-----------------------------------------*/
+.anchor {
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-shadow:  2px 2px 16px rgb(0, 118, 214);
+}
+.anchor span {
+    color: rgb(0, 118, 214);
+    font-size: 2rem;
+}
+/* end /HEADER
+-----------------------------------------*/
+
+/* HOTEL/GALERIA
+-----------------------------------------*/
+/* Grid */
+.grid-header{
+    width: 100%;
+    display: grid;
+}
+
+.grid-header-area{
+    grid-template-columns: 70% 30%;
+    grid-template-areas:    "cabecalho cabecalho"
+                            "galeria infos"
+                            "galeria infos"
+}
+
+/*********************** start Name/Nav ***********************/
+/* Grid-div */
+.cabecalho{
+    grid-area: cabecalho;
+    display: flex;
+    flex-direction: column;
+    margin: 0.6%; /* 5 / 960 */
+}
+/* name */
+.header-hotel {
+    width: 100%;
+    position: relative;
+    margin-bottom: 1.5625%; /* 15 / 960 */
+}
+.name-hotel {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    margin-top: 1%; /* ~10 / 960 */
+    margin-bottom: 0.6%; /* 5 / 960 */
+}
+.name-hotel h1 {
+    font-family: sans-serif;
+    font-size: 1.4rem;     
+    text-transform: uppercase;
+    margin-right: 2%;
+}
+.name-hotel .starsHotel{
+    display: flex;
+    align-items: center;
+}
+.name-hotel .starsHotel i {
+    font-size: 0.9rem;
+    padding: 0;
+    color: rgb(255, 208, 0);
+}
+.name-hotel .starsHotel span {
+    margin-left: 5%;
+    padding: 1%;
+    color: white;
+    background: gray;
+    border: 1px solid gray;
+    border-radius: 5px;
+}
+.header-hotel p {
+    font-family: sans-serif;
+    font-size: 1rem;
+    align-items: center;
+}
+.header-hotel p i {
+    margin: 0 0.6%;
+    color: dodgerblue;
+    font-size: 1rem;
+}
+/* end/ name */
+/* nav-info */
+.menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 1%;
+    background: dodgerblue;
+    border-radius: 4px;
+    box-shadow: 0 0 8px black;
+}
+.menu li a {
+    padding: 10px;
+    color: black;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+.menu li a:hover {
+    color: #fff;
+}
+.menu li i {
+    margin: 0 5px;
+    font-size: 0.4rem;
+}
+/* end/nav-info */
+/************************ end Name/Nav ************************/
+
+/********************** start Galeria *************************/
+
+/* Grid-div */
+.galeria{
+    grid-area: galeria;
+    display: flex;
+    flex-direction: column;
+    margin: 0.6%;
+}
+
+.container-header {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.gallery-slider {
+    position: relative;
+    width: 100%;
+    display: flex;
+    overflow: hidden;
+}
+
+.TemplateParent {
+    position: relative;
+    width: 100%; /* ajusta o tamanho da container da galeria */
+    height: auto;
+}
+.TemplateParent div.view {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    background: rgb(0, 0, 0);    
+}
+.TemplateParent div.view-content {
+    width: 100%; /* ajusta o tamanho da container da galeria */
+}
+.TemplateParent-Item {
+    width: 100%; 
+    height: auto;
+    overflow: hidden;
+    cursor: pointer;    
+}
+/* slider */
+.slide{
+    width: 100%;
+    height: 100%;
+}
+.slide img{
+    width: 100%;
+    height: 100%;
+}
+/* setas */
+.slider-arrow {
+    color: #fff;
+    padding: 10px;
+    font-size: 50px;
+    cursor: pointer;
+    opacity: 0.6;
+    top: 40%;
+}
+.slider-arrow:hover {
+    transform: scale(0.9);
+}
+#arrow-prev{
+    left: 20px;
+    position: absolute;
+}
+#arrow-next{
+    right: 20px;
+    position: absolute;
+    opacity: 0.6
+}
+/* fim/setas */
+#dots-wrapper{
+    display: flex;
+    margin: 8px auto;
+}
+.dot-navigation {
+    width: 15px;
+    height: 15px;
+    border-radius: 100%;
+    cursor: pointer;
+    margin: 0 8px;
+    border: 2px solid #000;
+    transition: .5s background-color;
+}
+.dot-navigation:hover {
+    background-color: dodgerblue;
+}
+.active-dot {
+    background-color: #333;
+}
+/* fade animation */
+.fade{
+    animation-name: fade;
+    animation-duration: .5s;
+}
+@keyframes fade{
+    from {opacity: .4}
+    to {opacity: 1}
+}
+/********************** end Galeria *************************/
+
+/********************** start Infos *************************/
+
+/* Grid-div */
+.infos{
+    grid-area: infos;
+    margin: 1%;
+}
+.avaliacao {
+    width: 100%;
+    margin: 1%;
+}
+.avaliacao h5 {
+    font-size: 1.1rem;
+    padding: .3em 0;
+}
+.avaliacao h6 {
+    font-size: .8rem;
+    font-weight: normal;
+}
+.avaliacao span {
+    font-size: .8rem;
+    color: dodgerblue;
+}
+
+.icons {
+    width: 100%;
+    padding: 5% 0;
+    border-top: 1px solid rgba(128, 128, 128, .5);
+    border-bottom: 1px solid rgba(128, 128, 128, .5);
+}
+.icons ul {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    font-size: .9rem;
+    padding: 0;
+}
+.icons ul li {
+    margin: 0 5%;
+}
+.icons ul.prev-icons {
+    padding-bottom: .9em;
+}
+.icons .navbar-link {
+    width: 100%;
+    font-size: .8rem;
+}
+.icons .navbar-link a {
+    color: dodgerblue;
+    font-size: .9rem;
+}
+.bottom {
+    display: flex;
+    flex-direction: row;
+}
+.preco {
+    width: 50%;
+    padding: 4%;
+}
+.preco h4 {
+    font-size: .9rem;
+    color: dodgerblue;
+    padding: .4em 0;
+}
+.preco h4 span {
+    font-size: 1.4rem;
+}
+.preco h5 {
+    font-size: .9rem;
+}
+.preco h6 {
+    font-size: .8rem;
+}
+.reservar {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 4%;
+}
+.reservar h5 {
+    font-size: .9rem;
+    font-weight: normal;
+}
+.reservar a {
+    display: block;
+    text-decoration: none;
+    color: #fff;
+    padding: 7%;
+    background: dodgerblue;
+    border: 2px solid dodgerblue;
+    border-radius: 40px;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: .7rem;
+    transition: 0.5s linear;
+}
+.reservar a:hover {
+    background: rgb(78, 166, 255);
+    border: 2px solid rgb(78, 166, 255);
+}
+/********************** end Infos *************************/
+/* end /HOTEL/GALERIA
+-----------------------------------------*/
+
+/* INFO
+-----------------------------------------*/
+.aside {
+    width: 100%;
+    padding: 2%;
+    margin-bottom: 2%;
+    border: 2px solid dodgerblue;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+.aside h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5em;
+}
+.aside ul li {
+    font-weight: bold;
+    color: dodgerblue;
+    margin-bottom: 0.4em;;
+}
+.aside ul li:last-of-type {
+    padding-bottom: 2%;
+}
+.aside ul li i {
+    font-size: 1em;
+    padding-right: 0.5em;
+}
+.aside p {
+    font-size: 1rem;
+    text-align: justify;
+}
+.info-hotel {
+    width: 100%;
+    box-sizing: border-box;
+}
+.info-hotel p {
+    font-size: 1rem;
+    padding: 0.5em 0;
+}
+/* end /INFO
+-----------------------------------------*/
+
+/* PROXIMIDADES
+-----------------------------------------*/
+/* title */
+.sections-title h2 {
+    font-size: 1.4rem;
+    padding: 0.1em 0.2em;
+    margin: 1% 0;
+    background: linear-gradient(to right, dodgerblue, purple);
+    border-radius: 10px;
+}
+.sections-title h3 {
+    color: dodgerblue;
+    font-weight: bold;
+    padding: 1% 0;
+}
+.sections-obs { /* POSICIONADO NO LUGAR ERRADO DO CÓDIGO! */
+    font-size: 0.9rem;
+    color: dodgerblue;
+    margin: 0 0.4em;
+}
+/* grid-container */
+.proximidades-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    border: 2px solid green; /* N */
+}
+/*Grid*/
+.grid-table-1, .grid-table-2{
+    width: 50%;
+    display: grid;
+    align-content: flex-start;
+}
+.one-table{
+    grid-area: one-table;
+}
+.two-table{
+    grid-area: two-table;
+}
+.three-table{
+    grid-area: three-table;
+}
+.four-table{
+    grid-area: four-table;
+}
+.five-table{
+    grid-area: five-table;
+}
+.six-table{
+    grid-area: six-table;
+}
+
+.mobile-table-p{
+    display: none;
+}
+.grid-table-areas-1, .grid-table-areas-2{
+    grid-row-gap: 10px;
+}
+.grid-table-areas-1{
+    grid-template-areas:    "one-table"
+                            "two-table"
+                            "three-table"
+}
+.grid-table-areas-2{
+    grid-template-areas:    "four-table"
+                            "five-table"
+                            "six-table"
+}
+/*Grid item*/
+.item-table{
+    margin: 0.1em;
+    padding: 0.2em;
+    background: #f1f1f1;
+    font-size: 1rem;
+    border-radius: 10px;
+    box-sizing: border-box;
+    border: 2px solid blue; /* N */
+}
+.item-table ul li a.title-proximidades {
+    display: block;
+    padding: 0.2em 0.2em;
+    text-align: center;
+    color: #fff;
+    font-size: 1.2rem;
+    background: #333;
+    border-radius: 18px;
+}
+.item-table ul ul li:not(.no-flex){
+    display: flex;
+    padding: 5px 0;
+    color: black;
+    align-items: center;
+    border-bottom: 1px solid #333;
+}
+.item-table ul ul li.no-flex {
+    padding: 5px 0;
+    color: black;
+    align-items: center;
+    border-bottom: 1px solid #333;
+}
+.item-table ul ul li.no-flex:last-child {
+    border-bottom: none;
+}
+.item-table ul ul li:last-child {
+    border-bottom: none;
+}
+.item-table ul ul li .distancia {
+    color: dodgerblue;
+    padding-left: 0.3em;
+    margin-left: auto;
+    min-width: 75px;
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+.item-table ul ul li .tipo {
+    color: red;
+    font-size: 0.8rem;
+    padding: 0.3em;
+}
+.item-table ul ul li .dica {
+    display: block;
+    width: 100%;
+    color: #333;
+    font-size: 0.8rem;
+}
+/* end /PROXIMIDADES
+-----------------------------------------*/
+
+/* COMODIDADES
+-----------------------------------------*/
+/* container comodidades */
+.container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-bottom: 10px;;
+}
+/*Grid*/
+.grid1, .grid2, .grid3{
+    width: 33.33%;
+    display: grid;
+    align-content: flex-start;
+}
+.one{
+    grid-area: one;
+}
+.two{
+    grid-area: two;
+}
+.three{
+    grid-area: three;
+}
+.four{
+    grid-area: four;
+}
+.five{
+    grid-area: five;
+}
+.six{
+    grid-area: six;
+}
+.seven{
+    grid-area: seven;
+}
+.eight{
+    grid-area: eight;
+}
+.nine{
+    grid-area: nine;
+}
+.ten{
+    grid-area: ten;
+}
+.eleven{
+    grid-area: eleven;
+}
+.twelve{
+    grid-area: twelve;
+}
+.thirteen{
+    grid-area: thirteen;
+}
+.fourteen{
+    grid-area: fourteen;
+}
+
+.mobile-m{
+    display: none;
+}
+.mobile-p{
+    display: none;
+}
+.grid-template-areas-1, .grid-template-areas-2, .grid-template-areas-3 {
+    grid-row-gap: 10px;
+}
+.grid-template-areas-1{
+    grid-template-areas:    "one"
+                            "two"
+                            "three"
+                            "four"
+                            "five"
+}
+.grid-template-areas-2{
+    grid-template-areas:    "six"
+                            "seven"
+                            "eight"
+                            "nine"
+                            "ten"
+}
+.grid-template-areas-3{
+    grid-template-areas:    "eleven"
+                            "twelve"
+                            "thirteen"
+                            "fourteen"
+}
+/*Grid item*/
+.item{
+    margin: 0.2em;
+    background: #ffffff;
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+.item ul li i, .item ul li a{
+    padding: 0.2em;
+}
+.item ul li i {
+    padding-right: 0.3em;
+}
+.item ul li a {
+    color: black;
+    font-size: 1.2rem;
+}
+.item ul ul li{
+    padding: 1px 0;
+    color: black;
+    margin-left: 1.1em;
+    line-height: 1.5em;
+}
+.item ul ul li:not(.paragrafo):before {
+    content: '\f058'; /* You should use \ and not /*/
+    font-family: "Font Awesome 5 Free"; /* This is the correct font-family*/
+    padding-right: 6px;
+    color: dodgerblue;
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: inherit;
+}
+.item .obs {
+    display: block;
+    margin-left: auto;
+    color: white;
+    width: fit-content;
+    padding: 1px 3px;
+    font-size: 0.8rem;
+    background: #333;
+    border-radius: 6px;
+}
+.item .paragrafo {
+    color: red;
+    font-size: 0.8rem;
+}
+.item span:not(.obs) {
+    color: white;
+    padding: 1px 3px;
+    background: purple;
+    border: 1px solid purple;
+    border-radius: 3px;
+    font-weight: 500;
+    font-size: 0.8rem;
+}
+/* end /COMODIDADES
+-----------------------------------------*/
+
+/* TESTEMUNHAS
+-----------------------------------------*/
+.testemunhas{
+    padding: 5% 0;
+    background-image: url(../images/comentarios.jpg);
+}
+.testimonials { /*talvez não precise, já tem o (section-header)*/
+    color: #000000;
+    text-align: center;
+}
+.testimonials h4 {
+    color: black;
+    border-bottom: 5px solid dodgerblue;
+    line-height: 2em;
+    font-size: 1.2rem;
+    font-weight: 700;
+    text-shadow: 0 0 0.2em white, 0 0 0.2em white;
+}
+.rowTestimunials {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.colTestimunials {
+    flex: 33.33%;
+    max-width: 33.33%;
+    box-sizing: border-box;
+    padding: 2%;
+}
+.testimonial {
+    background: rgba(255, 255, 255, 0.5);
+    padding: 1em;
+    border-radius: 10px;
+}
+.testimonial img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+.nameTestimonials {
+    font-size: 1rem;
+    text-transform: uppercase;
+    margin: 1em 0;
+}
+.stars {
+    color: rgb(250, 212, 0);
+    margin-bottom: .9em;
+}
+/* end /TESTEMUNHAS
+-----------------------------------------*/
+
+/* POPULARES
+-----------------------------------------*/
+.populares {
+    width: 100%;
+    height: 200px;
+    margin: 10px 0;
+    background: rgb(48, 48, 48);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+}
+.populares span {
+    font-size: 1rem;
+}
+.populares span i {
+    padding: 5px;
+    color: red;
+    font-size: 1.1rem;
+}
+/* end /POPULARES
+-----------------------------------------*/
+
+/* PARALLAX
+-----------------------------------------*/
+.parallax{
+    float: left;
+    width: 100%;
+    text-align: center;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-shadow: 0 0 0.3em black, 0 0 0.3em black;
+    padding: 5% 0;
+    background-image: linear-gradient(to top, rgba(31, 20, 20, .6) 50%, rgba(31, 20, 20, .6) 50%), url(../images/parallax.jpg);
+}
+.parallax header h2{ /*passar classe unica */
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-bottom: .5em;
+}
+.parallax header p {
+    font-size: 1rem;
+}
+.parallax .row-sobre {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.parallax .col-sobre {
+    flex: 33.33%;
+    max-width: 33.33%;
+    box-sizing: border-box;
+    padding: 2%;
+}
+.parallax .parallax-sobre {
+    min-height: 400px;
+    background: rgba(255, 255, 255, 0.3);
+    padding: 1em;
+    border-radius: 10px;
+}
+.parallax .parallax-sobre h3 {
+    font-size: 1rem;
+    margin-bottom: 1em;
+}
+.parallax .parallax-sobre p {
+    font-size: .9rem;
+}
+.parallax .parallax-sobre a {
+    font-size: 1rem;
+    color: dodgerblue;
+}
+.parallax .parallax-sobre a:hover {
+    font-size: 1.1rem;
+}
+/* end /PARALLAX
+-----------------------------------------*/
+
+/* FOOTER
+-----------------------------------------*/
+.footer{
+    background: #181818;
+    float: left;
+    width: 100%;
+    color: #f1f1f1;
+    padding: 2%;
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+footer .footer-col {
+    width: 100%;
+    padding: .5em 0;
+    margin: .5em 0;
+}
+footer .footer-col ul.footer-col-links {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+footer .footer-col ul.footer-col-links li {
+    padding: .5em;
+}
+
+footer ul.footer-col-social {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    text-align: center;
+}
+footer .footer-col ul.footer-col-social li {
+    font-size: 1.2rem;
+}
+footer ul.footer-col-social .btn{
+    position: relative;
+    display: inline-block;
+    width: 2.2em;
+    height: 2.2em;
+    color: #181818;
+    background: #f1f1f1;
+    border-radius: 30%;
+    box-shadow: 0 5px 15px -5px #00000070;
+    overflow: hidden;
+}
+footer ul.footer-col-social .btn i{
+    line-height: 2.2em;
+    transition: 0.2s linear;
+}
+footer ul.footer-col-social .btn:hover i{
+    transform: scale(1.3);
+    color: #f1f1f1;
+}
+footer ul.footer-col-social .btn::before{
+    content: "";
+    position: absolute;
+    width: 120%;
+    height: 120%;
+    background: dodgerblue;
+    transform: rotate(45deg);
+    left: -110%;
+    top: 90%;
+}
+footer ul.footer-col-social .btn:hover::before{
+    animation: aaa 0.7s 1;
+    top: -10%;
+    left: -10%;
+}
+@keyframes aaa{
+    0%{
+        left: -110%;
+        top: 90%;
+    }
+    50%{
+        left: 10%;
+        top: -30%;
+    }
+    100%{
+        top: -10%;
+        left: -10%;
+    }
+}
+footer div.line {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: center;
+    padding: .5em 0;
+    margin-bottom: 1em;
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+}
+footer div.line h2, footer div.line ul li {
+    font-size: 1rem;
+    font-weight: normal;
+}
+footer div.line i {
+    margin: auto 0;
+    font-size: 1.5rem;
+    transition: 0.2s linear;
+}
+footer div.line i:hover {
+    color: dodgerblue;
+    transform: scale(1.2) rotate(-45deg);
+}
+
+footer div.footer-autorais {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 2% 0;
+    font-family: 'open sans', sans-serif;
+}
+/* end /FOOTER
+-----------------------------------------*/
+
+@media screen and (max-width: 400px){
+    .anchor {
+        font-size: 1.2rem;
+    }
+    .anchor span {
+        font-size: 1.6rem;
+    }
+
+    .name-hotel h1, .sections-title h2 {
+        font-size: 1.2rem;
+    }
+}
+
+@media screen and (max-width: 599.9px){
+    .content{
+        max-width: 98%;
+        margin: 0 auto;
+    }
+    
+    /* menubar */
+    .space {
+        padding-top: 15%;;
+    }
+    .header{
+        position: fixed;
+        width: 100%;
+        background: rgb(0, 0, 0);
+        padding: 2%;
+        align-items: center;
+        z-index: 6;
+        -webkit-transition: all .5s ease-in-out;
+        transition: all .5s ease-in-out;
+    }
+    .nav-toggle{
+        position: relative;
+        top: .5em;
+        color: dodgerblue;
+        font-size: 1.2rem;
+        font-weight: bold;
+    }
+    .nav-close{
+        color: dodgerblue;
+        font-size: 1.2rem;
+    }
+    
+    .header .nav.active{
+        right: 0;
+    } 
+    .header .nav{
+        background: black;
+        height: 100%;
+        position: fixed;
+        padding: 15px;
+        right: -100%;
+        text-align: center;
+        top: 0;
+        z-index: 10;
+        transition: right .7s ease-in-out;
+    }
+    .header .nav ul li{
+        padding: 15px 5px;
+        color: white;
+        font-size: 20px;
+        border-bottom: 1px solid dodgerblue;
+    }
+    /* fim/menubar */
+
+    .name-hotel {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .name-hotel h1 {
+        font-size: 1.3rem;
+        margin-top: .5em;
+    }
+    .name-hotel .starsHotel{
+        margin: .2em 0;
+    }
+    /* Proximidades */
+    .mobile-table-p{
+        display: block;
+    }
+    .grid-table-areas-2{
+        display: none;
+    }
+    .grid-table-1{
+        width: 100%;
+    }
+    .grid-table-areas-1{
+        grid-template-areas:    "one-table"
+                                "two-table"
+                                "three-table"
+                                "four-table"
+                                "five-table"
+                                "six-table"
+    }
+
+    .item-table{
+        border: 1px solid #222;
+    }
+    .item-table ul li a.title-proximidades {
+        padding: 20px;
+        border-radius: 0; /* MOBILE FIRST */
+    }           
+     .item-table ul ul{
+        position: static;
+        overflow: hidden;
+        max-height: 0;
+        transition: all 1.5s;
+    }
+    .item-table ul li:hover ul{
+        height: auto;
+        max-height: 600px;
+    }
+    .item-table ul ul li{
+        width: 100%;
+        padding: 10px;
+        margin-left: 0;
+        border-bottom: solid 1px black;
+        color: black;
+        background: white;
+    }
+    /* Grid comodidades */
+    .grid-template-areas-2{
+        display: none;
+    }
+    .grid1{
+        width: 100%;
+    }
+    .mobile-m{
+        display: block;
+    }
+    .grid-template-areas-1{
+        grid-template-areas:    "one"
+                                "two"
+                                "three"
+                                "four"
+                                "five"
+                                "six"
+                                "seven"
+                                "eight"
+                                "nine"
+                                "ten"
+                                "eleven"
+                                "twelve"
+                                "thirteen"
+                                "fourteen"
+    }
+    .item{
+        border: 1px solid #222;
+    }
+    .item ul li{
+        width: 100%;
+        display: block;
+        text-align: center;
+        background-color: #222;
+        color: #fff;
+    }
+    .item ul li i{
+        display: block;
+        padding: 5px;
+    }
+    .item ul li a{
+        color: white;
+        display: block;
+        padding-bottom: 0.4em;
+    }
+    .item ul ul{
+        position: static;
+        overflow: hidden;
+        max-height: 0;
+        transition: all 1.5s;
+    }
+    .item ul li:hover ul{
+        height: auto;
+        max-height: 800px;
+    }
+    .item ul ul li{
+        width: 100%;
+        padding: 10px;
+        margin-left: 0;
+        border-bottom: solid 1px black;
+        color: black;
+        background: white;
+    }
+    .item .obs{
+        margin: 0 auto;
+        margin-top: 7px;
+        padding: 1px 1em;
+    }
+
+    /* testemunhas */
+    .colTestimunials, .col-sobre {
+        flex: 100%;
+        max-width: 100%;
+    }
+
+    /* footer */
+    footer .footer-col ul.footer-col-social li {
+        font-size: .7rem;
+    }
+    footer ul.footer-col-social .btn{
+        width: 1.7em;
+        height: 1.7em;
+    }
+    footer ul.footer-col-social .btn i{
+        line-height: 1.7em;
+    }
+}
+
+@media screen and (min-width: 600px){
+    .nav-toggle, .nav-close{
+        display: none;
+    }
+    .header{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1%;
+        font-family: 'open sans', sans-serif;
+        -webkit-transition: all .5s ease-in-out;
+        transition: all .5s ease-in-out;
+    }
+    .nav ul {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 5px;
+        font-size: .7rem;
+        text-transform: uppercase;
+        font-weight: bold;
+    }
+    .nav ul li a {
+        display: block;
+        padding: 1em;
+        position: relative;
+    }
+    .nav ul li a {
+        color: #fff;
+        letter-spacing: .2em;
+    }
+    .nav ul li a:hover {
+        color: rgb(0, 118, 214);
+        text-shadow:  12px 12px 26px rgb(0, 118, 214);
+    }
+    /* efeito da barra */
+    .nav ul li a::before,
+    .nav ul li a::after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        background-color: rgb(0, 118, 214);
+        left: 0;
+        transform: scaleX(0);
+        transition: all .5s;
+    }
+    .nav ul li a::before {
+        top: 0;
+        transform-origin: left;
+    }
+    .nav ul li a::after {
+        bottom: 0;
+        transform-origin: right;
+    }
+    .nav ul li a:hover::before,
+    .nav ul li a:hover::after {
+        transform: scaleX(1);
+    }
+}
+
+@media screen and (max-width: 768px){
+    .header.content{
+        max-width: 100%;
+        margin: 0 auto;
+    }
+    .menu {
+        display: none;
+    }
+
+    /* Grid comodidades */
+    .grid-template-areas-3{
+        display: none;
+    }
+    .grid1{
+        width: 49%;
+    }
+    .grid2{
+        width: 49%;
+    }
+    .mobile-p{
+        display: block;
+    }
+    .grid-template-areas-1{
+        grid-template-areas:    "one"
+                                "two"
+                                "three"
+                                "four"
+                                "five"
+                                "eleven"
+                                "twelve"
+
+                                
+    }
+    .grid-template-areas-2{
+        grid-template-areas:    "six"
+                                "seven"
+                                "eight"
+                                "nine"
+                                "ten"
+                                "thirteen"
+                                "fourteen"
+    }
+
+    /* footer */
+    footer .footer-col ul.footer-col-social li {
+        font-size: .9rem;
+    }
+    footer ul.footer-col-social .btn{
+        width: 1.8em;
+        height: 1.8em;
+    }
+    footer ul.footer-col-social .btn i{
+        line-height: 1.8em;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .TemplateLgallery {
+        transition: all 0.5s;
+    }
+}
+
+@media (min-width: 1150px){
+    .aside {
+        float: right;
+        width: 28%;
+    }
+    .info-hotel {
+        width: 70%;
+        float: left;
+    }
+    
+}
+
+@media screen and (max-width: 1000px){
+    .item ul li a { /* titulos */
+        font-size: 1rem;
+    }
+    .item ul ul li{ /* textos */
+        margin-left: 1em;;
+        font-size: 0.8rem;
+    }
+    .item .obs{ /* notificação 'custo adicional' */
+        font-size: 0.7rem;
+    }
+    .item .paragrafo{ /* paragrafos informativos */
+        font-size: 0.7rem;
+    }
+    .item span:not(.obs){ /* notificação 'gratis' */
+        font-size: 0.7rem;
+    }
+
+    /* proximidades */
+    .item-table{ /* textos  */
+        font-size: 0.8rem;
+    }
+    .item-table ul li a.title-proximidades { /* titulos */
+        font-size: 1rem;
+    }
+    .item-table ul ul li .distancia { /* distancias */
+        font-size: 0.8rem;
+    }
+    .item-table ul ul li .tipo { /* descrição */
+        font-size: 0.7rem;
+    }
+    .item-table ul ul li .dica { /* marcas */
+        font-size: 0.7rem;
+    }
+}
+
+@media (max-width: 1149.9px){
+    .header{
+        flex-direction: column;
+        justify-content: center;
+    }
+    .header .nav {
+        width: 100%;
+    }
+    .grid-header-area{
+        grid-template-columns: 1fr;
+        grid-template-areas:    "cabecalho"
+                                "galeria"
+                                "infos"
+    }
+    .avaliacao, .preco, .reservar {
+        text-align: center;
+    }
+    .reservar a {
+        padding: 5%;
+        font-size: .7rem;
+    }
+    /*testemunhas*/
+    .testimonial {
+        min-height: 200px;
+    }
+    .colTestimunials {
+        flex: 100%;
+        max-width: 100%;
+    }
+    /* fim/testemunhas */
+
+    .parallax .col-sobre {
+        flex: 100%;
+        max-width: 100%;
+    }
+    .parallax .parallax-sobre {
+        min-height: 100px;
+    }
+}

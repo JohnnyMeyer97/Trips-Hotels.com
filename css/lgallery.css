@@ -1,0 +1,533 @@
+/**************************** LGallery ****************************/
+.LGallery { /* sem está propriedade, a galeria nem abre... */
+  position: fixed !important;
+  top: 0 !important; /* 1 ou maior já faz a galeria abrir no meio da tela */
+  left: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  background-color: #0E0E0E !important; /* cor de fundo */
+  opacity: 0 !important;
+  transition: all 0.5s !important;
+  z-index: -1 !important;
+/*
+  Ao colocar a opacity com valor um, parece que a galeria já está feita atrás da página principal, ao clicar ela vem para frente. A propriedade z-index com valor -1 reforça a idéia.
+*/
+}
+
+.LGallery_open {
+  opacity: 1 !important;
+  z-index: 999 !important;
+/*
+Reforça mais ainda a idéia...
+*/
+}
+
+.LGallery * {
+  box-sizing: border-box !important;
+}
+
+/* ESTILO DA LUPA */
+.LGallery-OpenBtn { 
+  position: absolute !important;
+  top: 10px !important;
+  right: 10px !important;
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  width: 40px !important;
+  height: 40px !important;
+  border-radius: 50% !important;
+  background-color: rgba(255, 255, 255, 0.7) !important;
+  opacity: 0.4 !important;
+  cursor: pointer !important;
+  transition: opacity 0.4s !important;
+  z-index: 13 !important;
+}
+
+.LGallery-OpenBtn svg {
+  width: 50% !important;
+}
+
+.LGallery-OpenBtn:hover {
+  opacity: 1 !important;
+}
+/* fim/ESTILO DA LUPA */
+
+/* ESTILO BOTÕES PLAY, FULLSCREM E CLOSE */
+.LGallery-CloseBtn, .LGallery-FullscreenBtn, .LGallery-PlayBtn, .LGallery-PauseBtn, .LGallery-Counter {
+  position: fixed !important;
+  top: 10px !important;
+  right: 10px !important;
+  display: flex;
+  justify-content: center !important;
+  align-items: center !important;
+  width: 40px !important;
+  height: 40px !important;
+  cursor: pointer !important;
+  opacity: 0.6 !important;
+  transition: all 0.3s ease-out !important;
+  z-index: 12 !important;
+}
+
+@media screen and (max-width: 768px) { /* BOTÕES MOBILE */
+  .LGallery-CloseBtn, .LGallery-FullscreenBtn, .LGallery-PlayBtn, .LGallery-PauseBtn, .LGallery-Counter {
+    top: 3px !important;
+    right: 3px !important;
+  }
+}
+
+.LGallery-CloseBtn svg, .LGallery-FullscreenBtn svg, .LGallery-PlayBtn svg, .LGallery-PauseBtn svg, .LGallery-Counter svg { /* TAMANHO E COR DOS BOTÕES */
+  width: 15px !important;
+  fill: #fff !important;
+}
+
+@media screen and (max-width: 768px) {
+  .LGallery-CloseBtn svg, .LGallery-FullscreenBtn svg, .LGallery-PlayBtn svg, .LGallery-PauseBtn svg, .LGallery-Counter svg { /* TAMANHO BOTÕES MOBILE */
+    width: 15px !important;
+  }
+}
+
+.LGallery-CloseBtn:hover, .LGallery-FullscreenBtn:hover, .LGallery-PlayBtn:hover, .LGallery-PauseBtn:hover, .LGallery-Counter:hover { /* EFEITO DE AFASTAMENTO BOTÕES PLAY, FULLSCREM E CLOSE */
+  transform: scale(0.7) !important;
+  opacity: 1 !important;
+}
+
+.LGallery-FullscreenBtn { /* CONFIG. BOTÃO FULLSCREM */
+  padding-bottom: 2px;
+  right: 50px !important;
+}
+
+@media screen and (max-width: 768px) { /* CONFIG. BOTÃO FULLSCREM MOBILE (SEM BOTÃO) */
+  .LGallery-FullscreenBtn {
+    display: none !important;
+  }
+}
+
+.LGallery-FullscreenBtn svg { /* TAMANHO BOTÃO FULLSCREM */
+  width: 20px !important;
+}
+
+.LGallery-PlayBtn, .LGallery-PauseBtn { /* POSICIONAMENTO BOTÃO PLAY */
+  right: 90px !important;
+}
+
+.LGallery-PlayBtn_hidden, .LGallery-PauseBtn_hidden { /* FAZ A TROCA DO PLAY E PAUSE */
+  display: none !important;
+}
+
+@media screen and (max-width: 768px) { /* POSICIONAMENTO BOTÃO PLAY NO MOBILE */
+  .LGallery-PlayBtn, .LGallery-PauseBtn {
+    top: 3px !important;
+    right: 40px !important;
+  }
+}
+
+.LGallery-PlayBtn svg, .LGallery-PauseBtn svg { /* TAMANHO BOTÃO PLAY */
+  width: 15px !important;
+}
+
+@media screen and (max-width: 768px) { /* TAMANHO BOTÃO PLAY NO MOBILE */
+  .LGallery-PlayBtn svg, .LGallery-PauseBtn svg {
+    width: 15px !important;
+  }
+}
+/* fim/ESTILO BOTÕES PLAY, FULLSCREM E CLOSE */
+
+.LGallery-Counter { /* ESTILO DO ÍNDICE DE PÁGINA */
+  display: none;
+  right: auto;
+  left: 10px;
+  justify-content: flex-start !important;
+  width: 70px !important;
+  font-family: sans-serif;
+  font-weight: lighter;
+  color: #fff;
+}
+
+.LGallery-Counter:hover { /* EFEITO DE AFASTAMENTO DO ÍNDICE DE PÁGINA */
+  transform: scale(0.7) !important;
+  opacity: 1 !important;
+}
+
+.LGallery-Menubar { /* ESTILO DO BACKGROUND DA BARRA DE BOTÕES/ÍNDICE */
+  position: absolute !important;
+  top: 0px !important;
+  left: 0 !important;
+  width: 100% !important;
+  height: 60px !important;
+  background-color: #0E0E0E80 !important;
+  opacity: 1 !important;
+  z-index: 11 !important;
+}
+
+@media screen and (max-width: 768px) { /* ALTURA DO BACKGROUND DA BARRA DE BOTÕES/ÍNDICE NO MOBILE*/
+  .LGallery-Menubar {
+    height: 47px !important;
+  }
+}
+
+.LGalleryBody_hidden {
+  position: relative !important;
+  overflow: hidden !important;
+}
+
+/****************************** Slider ******************************/
+.LGallerySlider { /* POSICIONAMENTO DA IMAGEM NA GALERIA */
+  position: absolute !important;
+  top: 50% !important;
+  left: 50% !important;
+  transform: translate(-50%, -50%) !important;
+  width: 95% !important;
+  height: calc(100% - 50px) !important;
+}
+
+.LGallerySlider * {
+  box-sizing: border-box !important;
+}
+
+/* NÃO FEZ MUDANÇA EM NENHUMA GALERIA */
+.LGallerySlider_lgslider {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.LGallerySlider_lgslider .LGallerySlider-Label {
+  bottom: 0px !important;
+  left: 0 !important;
+  padding: 15px 0px !important;
+  width: 100% !important;
+}
+
+@media screen and (max-width: 768px) {
+  .LGallerySlider_lgslider .LGallerySlider-Label {
+    padding: 15px 0px !important;
+  }
+}
+
+@media screen and (max-height: 414px) {
+  .LGallerySlider_lgslider .LGallerySlider-Label {
+    padding: 5px !important;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .LGallerySlider {
+    width: 100% !important;
+    height: 100% !important;
+  }
+}
+/* NÃO FEZ MUDANÇA EM NENHUMA GALERIA */
+
+.LGallerySlider-Label { /* DESCRIÇÃO EM BAIXO DA FOTO */
+  position: absolute !important;
+  bottom: 25px !important;
+  left: 2.5% !important;
+  padding: 15px 30px !important;
+  width: 95% !important;
+  font-size: 16px !important;
+  font-weight: bold !important;
+  font-family: sans-serif !important;
+  color: #ececec !important;
+  text-align: center !important;
+  background-color: #0E0E0E80 !important;
+  opacity: 1 !important;
+  transition: all 0.5s;
+  z-index: 12 !important;
+  line-height: 1.7 !important;
+}
+
+
+@media screen and (max-height: 414px) { /* TALVEZ NÃO FAÇA MUDANÇA */
+  .LGallerySlider-Label {
+    font-size: 12px !important;
+  }
+}
+
+.LGallerySlider-Label_hidden { /* NÃO FEZ MUDANÇA */
+  opacity: 0 !important;
+}
+/* PAREI AKI */
+.LGallerySlider-LabelDescription { /* DESCRIÇÃO EM BAIXO DA FOTO */
+  display: block !important;
+  line-height: 1.3 !important;
+  width: 100% !important;
+  font-weight: normal !important;
+  font-size: 14px !important;
+}
+
+@media screen and (max-width: 768px) { /* DESCRIÇÃO EM BAIXO DA FOTO */
+  .LGallerySlider-LabelDescription {
+    font-size: 11px !important;
+  }
+}
+
+@media screen and (max-height: 414px) { /* DESCRIÇÃO EM BAIXO DA FOTO */
+  .LGallerySlider-LabelDescription {
+    font-size: 9px !important;
+  }
+}
+
+.LGallerySlider-Inner { /* TALVEZ NÃO FAÇA MUDANÇA */
+  position: relative !important;
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.LGallerySlider-Slide { /* CONFIG. DA IMAGEM NA GALERIA */
+  position: absolute !important;
+  top: 50%;
+  left: 50% !important;
+  transform: translate(-50%, -50%) scale(0.6) !important;
+  margin: 0 !important;
+  display: block !important;
+  width: auto;
+  max-width: 100% !important;
+  height: auto;
+  max-height: 100% !important;
+  cursor: grab;
+  box-shadow: none !important;
+  opacity: 0 !important;
+  will-change: transform;
+  will-change: opacity;
+  transition: opacity 0.7s, transform 1s;
+  z-index: 10;
+}
+
+.LGallerySlider-Slide_showing { /* CONFIG. DA IMAGEM NA GALERIA */
+  transform: translate(-50%, -50%) scale(1) !important;
+  opacity: 1 !important;
+  z-index: 11;
+}
+
+.LGallerySlider-Slide_swiping { /* NÃO FEZ MUDANÇA */
+  transition: all 0.5s !important;
+}
+
+.LGallerySlider-Slide_lgslider { /* NÃO FEZ MUDANÇA */
+  top: 0 !important;
+  left: 0 !important;
+  transform: translate(0, 0) scale(1) !important;
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  cursor: pointer;
+  transition: opacity 1s, transform 1s !important;
+}
+
+.LGallerySlider-Slide_lgslider .LGallerySlider-Slide_showing { /* NÃO FEZ MUDANÇA */
+  transform: translate(0, 0) scale(1) !important;
+}
+
+.LGallerySlider-Button { /* CONFIG. BOTÕES NEXT E PREV */
+  position: absolute !important;
+  top: calc(50% - 55px/2) !important;
+  transform: scale(1) !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  width: 40px !important;
+  height: 55px !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  cursor: pointer !important;
+  background: none !important;
+  border: none !important;
+  outline: none !important;
+  opacity: 0.6 !important;
+  transition: opacity 0.2s, transform .7s !important;
+  z-index: 12 !important;
+}
+
+.LGallerySlider-Button svg { /* CONFIG. BOTÕES NEXT E PREV */
+  width: 24px !important;
+  height: 40px !important;
+  fill: #fff !important;
+}
+
+.LGallerySlider-Button:hover { /* CONFIG. BOTÕES NEXT E PREV HOVER */
+  opacity: 1 !important;
+}
+
+.LGallerySlider-Button_prev { /* CONFIG. BOTÕES NEXT E PREV */
+  left: 0px !important;
+}
+
+.LGallerySlider-Button_next { /* CONFIG. BOTÕES NEXT E PREV */
+  right: 0px !important;
+}
+
+.LGallerySlider-Button_clicked { /* CONFIG. BOTÕES NEXT E PREV */
+  transform: scale(0.6) !important;
+  opacity: 1 !important;
+}
+
+.LGallery:fullscreen .LGallery-CloseBtn { /* ESCONDE BOTÃO CLOSE NO FULLSCREM */
+  display: none !important;
+}
+
+.LGallery:fullscreen .LGallery-FullscreenBtn { /* DESLIZA BOTÃO FULLSCREM PARA A DIREITA */
+  right: 10px !important;
+}
+
+.LGallery:fullscreen .LGallery-PlayBtn, .LGallery:fullscreen .LGallery-PauseBtn { /* DESLIZA BOTÃO PLAY/PAUSE PARA A DIREITA */
+  right: 50px !important;
+}
+
+.LGallery:fullscreen .LGallery_hiddenBtns { /* NÃO VI MUDANÇA MAS DEIXE */
+  opacity: 0 !important;
+  transition: all 1s !important;
+}
+
+.LGallery:fullscreen .LGallery-Menubar { /* ESCONDE BACKGROUND DO MENUBAR */
+  display: none !important;
+}
+
+.LGallery:fullscreen .LGallerySlider { /* 100% NO FULLSCREM */
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.LGallery:fullscreen .LGallerySlider-Label { /* DESCRIÇÃO NO FULLSCREM EM BAIXO */
+  left: 0 !important;
+  bottom: 0 !important;
+  width: 100% !important;
+}
+
+.LGallery:fullscreen .LGallerySlider-Slide { /* SUAVISA O EFEITO DE TROCA DE IMAGEM */
+  object-fit: cover;
+  width: auto !important;
+  height: 100% !important;
+  transform: translate(-50%, -50%) scale(1) !important;
+  transition: opacity 2s, transform 2s !important;
+}
+
+.LGallery:fullscreen .LGallerySlider-Button_prev { /* POSICIONAMENTO BOTÃO PREV */
+  left: 10px !important;
+}
+
+.LGallery:fullscreen .LGallerySlider-Button_next { /* POSICIONAMENTO BOTÃO NEXT */
+  right: 10px !important;
+}
+
+/* COMPATIBILIDADE */
+
+/* 
+  Algumas configurações podem estar sendo desnecessárias, no Microsoft Edge e no Firefox, ao abrir o modo fullscrem a descrição não ficava totalmente em baixo, a foto não ficava 100% e o botão close não desaparecia. No firefox, a transição de imagem ficava um pouco brusca com bug.
+  No Internet Explorer, alem de não mostrar lupa também nem abriu a galeria... Não fuciona nada.
+*/
+
+.LGallery:-webkit-full-screen {
+  width: 100% !important;
+  height: 100% !important;
+  opacity: 1 !important;
+}
+
+.LGallery:-webkit-full-screen .LGallery-CloseBtn {
+  display: none !important;
+}
+
+.LGallery:-webkit-full-screen .LGallery-FullscreenBtn {
+  right: 10px !important;
+}
+
+.LGallery:-webkit-full-screen .LGallery-PlayBtn, .LGallery:-webkit-full-screen .LGallery-PauseBtn {
+  right: 50px !important;
+}
+
+.LGallery:-webkit-full-screen .LGallery_hiddenBtns {
+  opacity: 0 !important;
+  transition: all 1s !important;
+}
+
+.LGallery:-webkit-full-screen .LGallery-Menubar {
+  display: none !important;
+}
+
+.LGallery:-webkit-full-screen .LGallerySlider {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.LGallery:-webkit-full-screen .LGallerySlider-Label {
+  left: 0 !important;
+  bottom: 0 !important;
+  width: 100% !important;
+}
+
+.LGallery:-webkit-full-screen .LGallerySlider-Slide {
+  object-fit: cover;
+  width: auto !important;
+  height: 100% !important;
+  transform: translate(-50%, -50%) scale(1) !important;
+  transition: opacity 2s, transform 2s !important;
+}
+
+.LGallery:-webkit-full-screen .LGallerySlider-Button_prev {
+  left: 10px !important;
+}
+
+.LGallery:-webkit-full-screen .LGallerySlider-Button_next {
+  right: 10px !important;
+}
+
+.LGallery:-moz-full-screen {
+  width: 100% !important;
+  height: 100% !important;
+  opacity: 1 !important;
+}
+
+.LGallery:-moz-full-screen .LGallery-CloseBtn {
+  display: none !important;
+}
+
+.LGallery:-moz-full-screen .LGallery-FullscreenBtn {
+  right: 10px !important;
+}
+
+.LGallery:-moz-full-screen .LGallery-PlayBtn, .LGallery:-moz-full-screen .LGallery-PauseBtn {
+  right: 50px !important;
+}
+
+.LGallery:-moz-full-screen .LGallery_hiddenBtns {
+  opacity: 0 !important;
+  transition: all 1s !important;
+}
+
+.LGallery:-moz-full-screen .LGallery-Menubar {
+  display: none !important;
+}
+
+.LGallery:-moz-full-screen .LGallerySlider {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.LGallery:-moz-full-screen .LGallerySlider-Label {
+  left: 0 !important;
+  bottom: 0 !important;
+  width: 100% !important;
+}
+
+.LGallery:-moz-full-screen .LGallerySlider-Slide {
+  object-fit: cover;
+  width: auto !important;
+  height: 100% !important;
+  transform: translate(-50%, -50%) scale(1) !important;
+  transition: opacity 2s, transform 2s !important;
+}
+
+.LGallery:-moz-full-screen .LGallerySlider-Button_prev {
+  left: 10px !important;
+}
+
+.LGallery:-moz-full-screen .LGallerySlider-Button_next {
+  right: 10px !important;
+}
+
+.LGallery:fullscreen {
+  width: 100% !important;
+  height: 100% !important;
+  opacity: 1 !important;
+}
+
+/* fim/COMPATIBILIDADE */

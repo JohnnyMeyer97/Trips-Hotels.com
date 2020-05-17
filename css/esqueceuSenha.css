@@ -1,0 +1,86 @@
+body {
+       margin: 0;
+       padding: 0;
+       font-family: "Montserrat", sans-serif;
+       background: rgba(0,0,0,0.8);
+}
+.container {
+       position: absolute;
+       top: 50%;
+       left: 50%;
+       transform: translate(-50%,-50%);
+       width: 65%; /* +/- 700 */
+       height: 90%; /* +/- 600 */
+       background: url(../images/bg.jpg);   
+       border-radius: 1.4285%; /* 10 / 700 */
+       color: white;
+       box-shadow: 2px 2px 4px dodgerblue;       
+}
+section{
+       width: 90%;       
+       margin-top: 17.8571%; /* 125 / 700 */
+       margin-bottom: 8.5714; /* 60 / 700 */
+       margin-left: auto;
+       margin-right: auto;
+}
+.container h1 {
+       font-size: 2em; /* 40 / 16 */       
+       text-transform: uppercase;
+       border-bottom: 5px solid dodgerblue;
+}
+.container h2 {
+       font-size: 1.3em;
+}
+
+.inputWithIcon{
+       position: relative;
+}
+
+.inputWithIcon input[type=text]{
+       width: 100%;
+       border: 2px solid #333;
+       background-color: #ffffffb3; 
+       color: #333;
+       border-radius: 4px;
+       margin: 1.1428% 0; /* 8 / 700 */
+       outline: none;
+       padding: 1.1428%; /* 8 / 700 */
+       box-sizing: border-box;
+       transition: .3s;
+}
+.inputWithIcon input[type=text]{
+       padding-left: 5.7142%; /* 40 / 700 */
+}
+.inputWithIcon input[type=text]:focus{
+       border-color: dodgerblue;
+       box-shadow: 0 0 8px 0 dodgerblue;
+}
+
+.inputWithIcon i{
+       position: absolute;
+       left: 0;
+       top: 1%;
+       padding: 2.5% 1%;
+       color: #333;
+       transition: .3s;
+}
+.inputWithIcon input[type=text]:focus + i{
+       color: dodgerblue;
+}
+
+.btn {
+       display: block;
+       width: 35%; /* 245 / 700 */
+       height: 40px;
+       border: none;
+       background: dodgerblue;
+       border-radius: 10px;
+       margin: 2% 0;       
+       font-family: "Montserrat", sans-serif;
+       font-size: 1em;       
+       color: white;
+       cursor: pointer;
+}
+.btn:hover {
+       background: #3498db;
+}

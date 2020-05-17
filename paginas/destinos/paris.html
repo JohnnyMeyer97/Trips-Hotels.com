@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Hotéis em Paris</title>
+    <link rel="shortcut icon" href="../images/cruise.ico">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../css/fontawesome-all.min.css">
+    <!--estilo geral-->
+    <link rel="stylesheet" type="text/css" href="../css/Style.css">
+    <!--estilo página-->
+    <link rel="stylesheet" href="../css/Style_paris.css">
+    <!-- slider menu -->
+    <link rel="stylesheet" href="../css/menu.css">
+    <!-- calendário -->
+    <link rel="stylesheet" href="../css/window-date-picker.css">
+</head>
+<body>
+    <!-- Start HEADER-MENUBAR -->
+    <header class="header">
+        <div class="content">
+            <div class="logo fl-left">
+                <a href="#"><span>T</span>rips <span>&</span> <span>H</span>otels</a>
+            </div>
+
+            <a href="#" class="nav-toggle fl-right">
+                <i class="fas fa-bars"></i> MENU
+            </a>
+
+            <nav class="nav">
+                <p class="text-right">
+                    <span class="nav-close">
+                        <i class="fas fa-times"></i>
+                    </span>
+                </p>
+                <ul>
+                    <li><a href="#">Passagens aéreas</a></li>
+                    <li><a href="#">Hotéis</a></li>
+                    <li><a href="#">Carros</a></li>
+                    <li><a href="#">Entrar</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <!-- End /HEADER-MENUBAR -->
+
+    <!-- Start SEARCH -->
+    <section class="section">
+        <div class="search-box bg-fixed">                
+            <!-- slider container -->
+            <section id="slider-container">
+                <div class="slider fade bg-fixed" id="slide-0">
+                <!-- slide image -->
+                </div>                  
+                <div class="slider fade bg-fixed" id="slide-1">
+                <!-- slide image -->
+                </div>                    
+                <!--<div class="slider fade bg-fixed" id="slide-2">
+                    slide image
+                </div>                    
+                <div class="slider fade bg-fixed" id="slide-3">
+                    slide image
+                </div>                    
+                <div class="slider fade bg-fixed" id="slide-4">
+                    slide image
+                </div>                    
+
+                <!-- dots -->
+                <div id="dots-wrapper" class="center_x">
+                    <!-- dot navigation for each slide -->
+                    <div class="dots-navigation"></div>                   
+                    <div class="dots-navigation"></div>                    
+                    <!--<div class="dots-navigation"></div>                    
+                    <div class="dots-navigation"></div>                    
+                    <div class="dots-navigation"></div>                    
+                    <div class="dots-navigation"></div>                    
+                    <div class="dots-navigation"></div>                    
+                    <div class="dots-navigation"></div>-->
+                </div>
+
+            </section>
+            <!-- fim/slider container -->
+            <header>
+                <p class="tagline">Hotéis em Paris</p>
+            </header>
+
+            <form name="formsearch" method="post" action="">
+                <input type="search" name="busca" id="busca" placeholder="Pesquisar" />
+                <div id="picker"></div>
+                <input id="demo" class="toggle" placeholder="Entrada">
+                <div id="picker2"></div>
+                <input id="demo2" class="toggle2" placeholder="Saída">
+                <!--por enquanto coloquei um input, más um select talvez seja melhor-->
+                <input type="text" name="Nroom" id="Iroom" placeholder="1 Quarto, 2 hóspedes">
+                <button type="submit"><i class="fas fa-search"></i></button>
+            </form>
+        </div>
+    </section>
+    <!-- end/SEARCH -->
+
+
+       
+    <!--menuslider-->
+    <script src="../js/menu-slider.js"></script>
+    <!--menubar-->
+    <script src="../js/script.js"></script>
+    <!--calendário-->
+    <script src="../js/window-date-picker.js"></script>
+    <script>
+        const picker = new WindowDatePicker({
+            el: '#picker',
+            toggleEl: '.toggle',
+            inputEl: '#demo',
+            type: 'DATEHOUR',
+            hourType: '24',
+            showButtons: true,
+            inputToggle: true
+        });
+        const picker2 = new WindowDatePicker({
+            el: '#picker2',
+            toggleEl: '.toggle2',
+            inputEl: '#demo2',
+            type: 'DATEHOUR',
+            hourType: '24',
+            showButtons: true,
+            inputToggle: true
+        });
+    </script>
+</body>
+</html>
